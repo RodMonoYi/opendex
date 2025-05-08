@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FakemonDex | Catálogo</title>
+    <meta name="description" content="Explore Fakemons criados por artistas de todo o mundo">
+    <link href="./css/styles.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./js/theme.js" defer></script>
+    <script src="./js/i18n.js" defer></script>
+    <script src="./js/app.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body
+    class="bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-900 dark:to-gray-800 min-h-screen transition-colors duration-300">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-white/70 dark:bg-gray-900/70 shadow-sm">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div
+                    class="w-10 h-10 bg-gradient-to-r from-yellow-400 to-red-500 rounded-full flex items-center justify-center">
+                    <i class="fas fa-dragon text-white text-xl"></i>
+                </div>
+                <h1
+                    class="text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent dark:from-purple-400 dark:to-pink-400">
+                    FakemonDex</h1>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="upload.html"
+                    class="px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full hover:from-purple-600 hover:to-pink-600 transition-all shadow-md text-sm flex items-center gap-2">
+                    <i class="fas fa-plus"></i>
+                    <span data-i18n="add_fakemon">Novo Fakemon</span>
+                </a>
+                <button id="theme-toggle"
+                    class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+                    <i class="fas fa-moon dark:hidden text-gray-700"></i>
+                    <i class="fas fa-sun hidden dark:block text-yellow-300"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Filtros -->
+        <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 mb-8">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                <h2 class="text-2xl font-bold text-gray-800 dark:text-white flex items-center gap-2">
+                    <i class="fas fa-list text-purple-500"></i>
+                    <span data-i18n="all_fakemons">Catálogo Completo</span>
+                </h2>
+
+                <div class="flex flex-wrap gap-3 w-full md:w-auto">
+                    <!-- Busca -->
+                    <div class="relative flex-grow md:flex-grow-0 md:w-64">
+                        <input type="text" placeholder="Buscar Fakemon..."
+                            class="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-full focus:ring-2 focus:ring-purple-500 focus:border-purple-500 dark:bg-gray-700 dark:text-white transition-colors"
+                            id="search-fakemon">
+                        <i class="fas fa-search absolute left-3 top-3 text-gray-400 dark:text-gray-300"></i>
+                    </div>
+
+                    <!-- Filtro por Tipo -->
+                    <div class="relative group">
+                        <button
+                            class="px-4 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-full flex items-center gap-2 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+                            <i class="fas fa-filter text-gray-600 dark:text-gray-300"></i>
+                            <span data-i18n="filter_type">Tipo</span>
+                        </button>
+                        <div
+                            class="absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-lg shadow-xl py-2 z-50 hidden group-hover:block border border-gray-200 dark:border-gray-700">
+                            <div class="px-3 py-1 text-sm text-gray-700 dark:text-gray-300" data-i18n="filter_type">
+                                Filtrar por tipo</div>
+                            <div class="grid grid-cols-2 gap-2 px-3 py-2" id="type-filters">
+                                <!-- JS vai preencher aqui -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ordenação -->
+                    <div class="relative group">
+                        <button
+                            class="px-4 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-full flex items-center gap-2 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+                            <i class="fas fa-sort-amount-down text-gray-600 dark:text-gray-300"></i>
+                            <span data-i18n="sort_by">Ordenar</span>
+                        </button>
+                        <div
+                            class="absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-lg shadow-xl py-1 z-50 hidden group-hover:block border border-gray-200 dark:border-gray-700">
+                            <a href="#"
+                                class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-purple-50 dark:hover:bg-gray-700 transition-colors"
+                                data-sort="name-asc" data-i18n="sort_name_asc">Nome (A-Z)</a>
+                            <a href="#"
+                                class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-purple-50 dark:hover:bg-gray-700 transition-colors"
+                                data-sort="name-desc" data-i18n="sort_name_desc">Nome (Z-A)</a>
+                            <a href="#"
+                                class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-purple-50 dark:hover:bg-gray-700 transition-colors"
+                                data-sort="hp" data-i18n="sort_hp">HP (Maior)</a>
+                            <a href="#"
+                                class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-purple-50 dark:hover:bg-gray-700 transition-colors"
+                                data-sort="attack" data-i18n="sort_attack">Ataque (Maior)</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Grid de Fakemons -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="all-fakemons">
+            <!-- JS vai preencher aqui -->
+        </div>
+
+        <!-- Paginação -->
+        <div class="flex justify-center mt-12">
+            <nav class="flex items-center gap-1 bg-white dark:bg-gray-800 rounded-full shadow-md p-1">
+                <button
+                    class="w-10 h-10 rounded-full flex items-center justify-center bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-purple-500 hover:text-white transition-colors">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button
+                    class="w-10 h-10 rounded-full flex items-center justify-center bg-purple-500 text-white">1</button>
+                <button
+                    class="w-10 h-10 rounded-full flex items-center justify-center bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-purple-500 hover:text-white transition-colors">2</button>
+                <button
+                    class="w-10 h-10 rounded-full flex items-center justify-center bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-purple-500 hover:text-white transition-colors">3</button>
+                <button
+                    class="w-10 h-10 rounded-full flex items-center justify-center bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-purple-500 hover:text-white transition-colors">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </nav>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 dark:bg-gray-900/70 border-t border-gray-200 dark:border-gray-800 mt-12">
+        <div class="container mx-auto px-4 py-8">
+            <div class="text-center text-gray-600 dark:text-gray-400 text-sm">
+                © 2023 FakemonDex - <span data-i18n="footer_copyright">Todos os direitos reservados</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal de Detalhes (mesmo do index.html original) -->
+    <div id="fakemon-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 hidden">
+        <!-- Conteúdo do modal aqui -->
+    </div>
+
+    <!-- Script de Listagem -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Dados de exemplo (substituir por dados reais)
+            const fakemons = [
+                {
+                    id: 1,
+                    name: "Pyroclaw",
+                    types: ["fire", "dragon"],
+                    description: "A majestic dragon with flames that can melt steel. It's said to live in active volcanoes.",
+                    height: 2.3,
+                    weight: 185.5,
+                    stats: {
+                        hp: 95,
+                        attack: 120,
+                        defense: 85,
+                        speed: 80
+                    },
+                    artist: {
+                        name: "LunaSkies",
+                        social: [
+                            { platform: "twitter", url: "https://twitter.com/lunaskies" },
+                            { platform: "instagram", url: "https://instagram.com/lunaskies" }
+                        ]
+                    },
+                    image: "https://placehold.co/400x400/FF6B6B/FFFFFF?text=Pyroclaw"
+                },
+                {
+                    id: 2,
+                    name: "Aquaflare",
+                    types: ["water", "fairy"],
+                    description: "This mystical creature dances on water surfaces, leaving glowing trails behind.",
+                    height: 1.2,
+                    weight: 32.7,
+                    stats: {
+                        hp: 80,
+                        attack: 75,
+                        defense: 90,
+                        speed: 110
+                    },
+                    artist: {
+                        name: "MarineArt",
+                        social: [
+                            { platform: "deviantart", url: "https://deviantart.com/marineart" }
+                        ]
+                    },
+                    image: "https://placehold.co/400x400/4ECDC4/FFFFFF?text=Aquaflare"
+                },
+                {
+                    id: 3,
+                    name: "Terravolt",
+                    types: ["electric", "ground"],
+                    description: "A powerful creature that generates earthquakes by stomping its electrified feet.",
+                    height: 1.8,
+                    weight: 210.0,
+                    stats: {
+                        hp: 90,
+                        attack: 110,
+                        defense: 100,
+                        speed: 60
+                    },
+                    artist: {
+                        name: "GeoDesigns",
+                        social: [
+                            { platform: "artstation", url: "https://artstation.com/geodesigns" },
+                            { platform: "twitter", url: "https://twitter.com/geodesigns" }
+                        ]
+                    },
+                    image: "https://placehold.co/400x400/FFE66D/000000?text=Terravolt"
+                },
+                {
+                    id: 4,
+                    name: "Nimbreeze",
+                    types: ["flying", "ice"],
+                    description: "A swift creature that creates snowstorms with the flap of its wings.",
+                    height: 1.5,
+                    weight: 42.3,
+                    stats: {
+                        hp: 70,
+                        attack: 85,
+                        defense: 75,
+                        speed: 130
+                    },
+                    artist: {
+                        name: "SkyIllustrator",
+                        social: [
+                            { platform: "instagram", url: "https://instagram.com/skyillustrator" }
+                        ]
+                    },
+                    image: "https://placehold.co/400x400/A5D8FF/000000?text=Nimbreeze"
+                }
+            ];
+
+            // Renderiza os Fakemons
+            const container = document.getElementById('all-fakemons');
+            fakemons.forEach(fakemon => {
+                const card = document.createElement('div');
+                card.className = 'bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-lg transition-shadow overflow-hidden cursor-pointer';
+                card.innerHTML = `
+                    <div class="relative">
+                        <div class="h-48 bg-gray-100 dark:bg-gray-700 flex items-center justify-center p-4">
+                            <img src="${fakemon.image}" alt="${fakemon.name}" class="h-full object-contain">
+                        </div>
+                        <span class="absolute top-2 right-2 bg-white/90 dark:bg-gray-900/90 text-xs px-2 py-1 rounded-full">#${fakemon.id.toString().padStart(3, '0')}</span>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg text-gray-800 dark:text-white mb-2">${fakemon.name}</h3>
+                        <div class="flex gap-2 mb-3">
+                            ${fakemon.types.map(type => `
+                                <span class="text-xs px-3 py-1 rounded-full ${typeColors[type]}">${type}</span>
+                            `).join('')}
+                        </div>
+                        <div class="flex justify-between text-sm text-gray-600 dark:text-gray-300">
+                            <span>HP: ${fakemon.stats.hp}</span>
+                            <span>ATQ: ${fakemon.stats.attack}</span>
+                            <span>DEF: ${fakemon.stats.defense}</span>
+                        </div>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+
+            // Filtros de tipo
+            const typeFilters = document.getElementById('type-filters');
+            Object.keys(typeColors).forEach(type => {
+                const filter = document.createElement('button');
+                filter.type = 'button';
+                filter.className = `text-xs px-3 py-1 rounded-full ${typeColors[type]} opacity-70 hover:opacity-100 transition-opacity`;
+                filter.textContent = type;
+                filter.addEventListener('click', () => {
+                    filter.classList.toggle('ring-2');
+                    filter.classList.toggle('ring-purple-500');
+                    filter.classList.toggle('opacity-70');
+                    filter.classList.toggle('opacity-100');
+                    // Lógica de filtro aqui
+                });
+                typeFilters.appendChild(filter);
+            });
+        });
+    </script>
+</body>
+
+</html>

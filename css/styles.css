@@ -1,0 +1,89 @@
+/* Custom styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.dark ::-webkit-scrollbar-track {
+    background: #374151;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+    background: #6b7280;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+    background: #9ca3af;
+}
+
+/* Animation for fakemon cards */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#featured-fakemons > div {
+    animation: fadeIn 0.5s ease-out forwards;
+    opacity: 0;
+}
+
+#featured-fakemons > div:nth-child(1) { animation-delay: 0.1s; }
+#featured-fakemons > div:nth-child(2) { animation-delay: 0.2s; }
+#featured-fakemons > div:nth-child(3) { animation-delay: 0.3s; }
+#featured-fakemons > div:nth-child(4) { animation-delay: 0.4s; }
+
+
+
+
+
+
+
+
+
+
+
+
+/* Estilo para o formulário em página cheia */
+#add-fakemon-form {
+    animation: fadeInUp 0.5s ease-out;
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Ajuste para inputs no dark mode */
+.dark #add-fakemon-form input,
+.dark #add-fakemon-form textarea,
+.dark #add-fakemon-form select {
+    background-color: #374151;
+    border-color: #4b5563;
+}
