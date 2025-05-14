@@ -1,3 +1,4 @@
+// index.html
 <!DOCTYPE html>
 <html lang="pt" class="scroll-smooth">
 <head>
@@ -12,31 +13,31 @@
     <script src="./js/app.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-900 dark:to-gray-800 min-h-screen transition-colors duration-300">
+<body class="bg-gradient-to-br from-blue-50 to-purple-50 darkj:from-gray-900 darkj:to-gray-800 min-h-screen transition-colors duration-300">
     <!-- Header -->
-    <header class="sticky top-0 z-50 backdrop-blur-md bg-white/70 dark:bg-gray-900/70 shadow-sm">
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-white/70 darkj:bg-gray-900/70 shadow-sm">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center space-x-2">
                 <div class="w-10 h-10 bg-gradient-to-r from-yellow-400 to-red-500 rounded-full flex items-center justify-center shadow-md">
                     <i class="fas fa-dragon text-white text-xl"></i>
                 </div>
-                <h1 class="text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent dark:from-purple-400 dark:to-pink-400">FakemonDex</h1>
+                <h1 class="text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent darkj:from-purple-400 darkj:to-pink-400">FakemonDex</h1>
             </div>
             
             <div class="flex items-center space-x-4">
-                <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
-                    <i class="fas fa-moon dark:hidden text-gray-700"></i>
-                    <i class="fas fa-sun hidden dark:block text-yellow-300"></i>
+                <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-200 darkj:hover:bg-gray-700 transition-colors">
+                    <i class="fas fa-moon darkj:hidden text-gray-700"></i>
+                    <i class="fas fa-sun hidden darkj:block text-yellow-300"></i>
                 </button>
                 
                 <div class="relative group">
-                    <button id="language-toggle" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
-                        <i class="fas fa-globe text-gray-700 dark:text-gray-300"></i>
+                    <button id="language-toggle" class="p-2 rounded-full hover:bg-gray-200 darkj:hover:bg-gray-700 transition-colors">
+                        <i class="fas fa-globe text-gray-700 darkj:text-gray-300"></i>
                     </button>
-                    <div class="absolute right-0 mt-2 w-40 bg-white dark:bg-gray-800 rounded-md shadow-lg py-1 z-50 hidden group-hover:block">
-                        <a href="#" data-lang="pt" class="block px-4 py-2 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Português</a>
-                        <a href="#" data-lang="en" class="block px-4 py-2 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">English</a>
-                        <a href="#" data-lang="es" class="block px-4 py-2 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Español</a>
+                    <div class="absolute right-0 mt-2 w-40 bg-white darkj:bg-gray-800 rounded-md shadow-lg py-1 z-50 hidden group-hover:block">
+                        <a href="#" data-lang="pt" class="block px-4 py-2 text-gray-800 darkj:text-gray-200 hover:bg-gray-100 darkj:hover:bg-gray-700">Português</a>
+                        <a href="#" data-lang="en" class="block px-4 py-2 text-gray-800 darkj:text-gray-200 hover:bg-gray-100 darkj:hover:bg-gray-700">English</a>
+                        <a href="#" data-lang="es" class="block px-4 py-2 text-gray-800 darkj:text-gray-200 hover:bg-gray-100 darkj:hover:bg-gray-700">Español</a>
                     </div>
                 </div>
                 
@@ -52,14 +53,14 @@
         <!-- Hero Section -->
         <section class="mb-16 text-center">
             <div class="max-w-3xl mx-auto">
-                <h2 class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent dark:from-purple-400 dark:to-pink-400" data-i18n="hero_title">Mostre seu Fakemon ao mundo!</h2>
-                <p class="text-lg text-gray-600 dark:text-gray-300 mb-8" data-i18n="hero_subtitle">Compartilhe suas criações artísticas na maior comunidade de Fakemons. Conecte-se com outros artistas e inspire-se!</p>
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent darkj:from-purple-400 darkj:to-pink-400" data-i18n="hero_title">Mostre seu Fakemon ao mundo!</h2>
+                <p class="text-lg text-gray-600 darkj:text-gray-300 mb-8" data-i18n="hero_subtitle">Compartilhe suas criações artísticas na maior comunidade de Fakemons. Conecte-se com outros artistas e inspire-se!</p>
                 <div class="flex flex-wrap justify-center gap-4">
                     <button class="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full hover:from-purple-600 hover:to-pink-600 transition-all shadow-lg font-medium flex items-center">
                         <i class="fas fa-plus mr-2"></i>
                         <span data-i18n="add_fakemon">Adicionar Fakemon</span>
                     </button>
-                    <button class="px-6 py-3 bg-white dark:bg-gray-800 text-gray-800 dark:text-white rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-all shadow-lg font-medium flex items-center">
+                    <button class="px-6 py-3 bg-white darkj:bg-gray-800 text-gray-800 darkj:text-white rounded-full hover:bg-gray-100 darkj:hover:bg-gray-700 transition-all shadow-lg font-medium flex items-center">
                         <i class="fas fa-search mr-2"></i>
                         <span data-i18n="explore">Explorar</span>
                     </button>
@@ -67,27 +68,27 @@
             </div>
             
             <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-                <div class="bg-white dark:bg-gray-800 p-4 rounded-xl shadow-md hover:shadow-lg transition-shadow">
-                    <div class="h-32 bg-gradient-to-br from-red-100 to-yellow-100 dark:from-red-900/30 dark:to-yellow-900/30 rounded-lg mb-3 flex items-center justify-center">
-                        <i class="fas fa-fire text-4xl text-red-500 dark:text-red-400"></i>
+                <div class="bg-white darkj:bg-gray-800 p-4 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+                    <div class="h-32 bg-gradient-to-br from-red-100 to-yellow-100 darkj:from-red-900/30 darkj:to-yellow-900/30 rounded-lg mb-3 flex items-center justify-center">
+                        <i class="fas fa-fire text-4xl text-red-500 darkj:text-red-400"></i>
                     </div>
                     <h3 class="font-semibold text-center" data-i18n="type_fire">Fogo</h3>
                 </div>
-                <div class="bg-white dark:bg-gray-800 p-4 rounded-xl shadow-md hover:shadow-lg transition-shadow">
-                    <div class="h-32 bg-gradient-to-br from-blue-100 to-cyan-100 dark:from-blue-900/30 dark:to-cyan-900/30 rounded-lg mb-3 flex items-center justify-center">
-                        <i class="fas fa-tint text-4xl text-blue-500 dark:text-blue-400"></i>
+                <div class="bg-white darkj:bg-gray-800 p-4 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+                    <div class="h-32 bg-gradient-to-br from-blue-100 to-cyan-100 darkj:from-blue-900/30 darkj:to-cyan-900/30 rounded-lg mb-3 flex items-center justify-center">
+                        <i class="fas fa-tint text-4xl text-blue-500 darkj:text-blue-400"></i>
                     </div>
                     <h3 class="font-semibold text-center" data-i18n="type_water">Água</h3>
                 </div>
-                <div class="bg-white dark:bg-gray-800 p-4 rounded-xl shadow-md hover:shadow-lg transition-shadow">
-                    <div class="h-32 bg-gradient-to-br from-green-100 to-lime-100 dark:from-green-900/30 dark:to-lime-900/30 rounded-lg mb-3 flex items-center justify-center">
-                        <i class="fas fa-leaf text-4xl text-green-500 dark:text-green-400"></i>
+                <div class="bg-white darkj:bg-gray-800 p-4 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+                    <div class="h-32 bg-gradient-to-br from-green-100 to-lime-100 darkj:from-green-900/30 darkj:to-lime-900/30 rounded-lg mb-3 flex items-center justify-center">
+                        <i class="fas fa-leaf text-4xl text-green-500 darkj:text-green-400"></i>
                     </div>
                     <h3 class="font-semibold text-center" data-i18n="type_grass">Planta</h3>
                 </div>
-                <div class="bg-white dark:bg-gray-800 p-4 rounded-xl shadow-md hover:shadow-lg transition-shadow">
-                    <div class="h-32 bg-gradient-to-br from-gray-100 to-blue-100 dark:from-gray-700 dark:to-blue-900/30 rounded-lg mb-3 flex items-center justify-center">
-                        <i class="fas fa-bolt text-4xl text-yellow-500 dark:text-yellow-400"></i>
+                <div class="bg-white darkj:bg-gray-800 p-4 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+                    <div class="h-32 bg-gradient-to-br from-gray-100 to-blue-100 darkj:from-gray-700 darkj:to-blue-900/30 rounded-lg mb-3 flex items-center justify-center">
+                        <i class="fas fa-bolt text-4xl text-yellow-500 darkj:text-yellow-400"></i>
                     </div>
                     <h3 class="font-semibold text-center" data-i18n="type_electric">Elétrico</h3>
                 </div>
@@ -97,8 +98,8 @@
         <!-- Featured Fakemons -->
         <section class="mb-16">
             <div class="flex justify-between items-center mb-8">
-                <h2 class="text-2xl font-bold text-gray-800 dark:text-white" data-i18n="featured_fakemons">Fakemons em Destaque</h2>
-                <a href="#" class="text-purple-600 dark:text-purple-400 hover:underline flex items-center" data-i18n="view_all">
+                <h2 class="text-2xl font-bold text-gray-800 darkj:text-white" data-i18n="featured_fakemons">Fakemons em Destaque</h2>
+                <a href="#" class="text-purple-600 darkj:text-purple-400 hover:underline flex items-center" data-i18n="view_all">
                     Ver todos <i class="fas fa-arrow-right ml-1"></i>
                 </a>
             </div>
@@ -109,39 +110,39 @@
         </section>
 
         <!-- How It Works -->
-        <section class="mb-16 bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8">
-            <h2 class="text-2xl font-bold text-center mb-12 text-gray-800 dark:text-white" data-i18n="how_it_works">Como Funciona</h2>
+        <section class="mb-16 bg-white darkj:bg-gray-800 rounded-2xl shadow-lg p-8">
+            <h2 class="text-2xl font-bold text-center mb-12 text-gray-800 darkj:text-white" data-i18n="how_it_works">Como Funciona</h2>
             
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="text-center">
-                    <div class="w-16 h-16 bg-purple-100 dark:bg-purple-900/30 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-user-plus text-purple-600 dark:text-purple-400 text-xl"></i>
+                    <div class="w-16 h-16 bg-purple-100 darkj:bg-purple-900/30 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-user-plus text-purple-600 darkj:text-purple-400 text-xl"></i>
                     </div>
-                    <h3 class="font-semibold text-lg mb-2 text-gray-800 dark:text-white" data-i18n="step1_title">Crie sua conta</h3>
-                    <p class="text-gray-600 dark:text-gray-300" data-i18n="step1_desc">Cadastre-se gratuitamente para começar a compartilhar suas criações.</p>
+                    <h3 class="font-semibold text-lg mb-2 text-gray-800 darkj:text-white" data-i18n="step1_title">Crie sua conta</h3>
+                    <p class="text-gray-600 darkj:text-gray-300" data-i18n="step1_desc">Cadastre-se gratuitamente para começar a compartilhar suas criações.</p>
                 </div>
                 
                 <div class="text-center">
-                    <div class="w-16 h-16 bg-pink-100 dark:bg-pink-900/30 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-upload text-pink-600 dark:text-pink-400 text-xl"></i>
+                    <div class="w-16 h-16 bg-pink-100 darkj:bg-pink-900/30 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-upload text-pink-600 darkj:text-pink-400 text-xl"></i>
                     </div>
-                    <h3 class="font-semibold text-lg mb-2 text-gray-800 dark:text-white" data-i18n="step2_title">Adicione seu Fakemon</h3>
-                    <p class="text-gray-600 dark:text-gray-300" data-i18n="step2_desc">Preencha os detalhes, adicione imagens e compartilhe sua arte.</p>
+                    <h3 class="font-semibold text-lg mb-2 text-gray-800 darkj:text-white" data-i18n="step2_title">Adicione seu Fakemon</h3>
+                    <p class="text-gray-600 darkj:text-gray-300" data-i18n="step2_desc">Preencha os detalhes, adicione imagens e compartilhe sua arte.</p>
                 </div>
                 
                 <div class="text-center">
-                    <div class="w-16 h-16 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-users text-blue-600 dark:text-blue-400 text-xl"></i>
+                    <div class="w-16 h-16 bg-blue-100 darkj:bg-blue-900/30 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-users text-blue-600 darkj:text-blue-400 text-xl"></i>
                     </div>
-                    <h3 class="font-semibold text-lg mb-2 text-gray-800 dark:text-white" data-i18n="step3_title">Conecte-se</h3>
-                    <p class="text-gray-600 dark:text-gray-300" data-i18n="step3_desc">Receba feedback e conecte-se com outros artistas apaixonados.</p>
+                    <h3 class="font-semibold text-lg mb-2 text-gray-800 darkj:text-white" data-i18n="step3_title">Conecte-se</h3>
+                    <p class="text-gray-600 darkj:text-gray-300" data-i18n="step3_desc">Receba feedback e conecte-se com outros artistas apaixonados.</p>
                 </div>
             </div>
         </section>
 
         <!-- Recent Artists -->
         <section class="mb-16">
-            <h2 class="text-2xl font-bold mb-8 text-gray-800 dark:text-white" data-i18n="recent_artists">Artistas Recentes</h2>
+            <h2 class="text-2xl font-bold mb-8 text-gray-800 darkj:text-white" data-i18n="recent_artists">Artistas Recentes</h2>
             
             <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4" id="recent-artists">
                 <!-- Artist cards will be loaded here by JavaScript -->
@@ -150,7 +151,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-100 dark:bg-gray-900/70 border-t border-gray-200 dark:border-gray-800">
+    <footer class="bg-gray-100 darkj:bg-gray-900/70 border-t border-gray-200 darkj:border-gray-800">
         <div class="container mx-auto px-4 py-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div>
@@ -158,62 +159,62 @@
                         <div class="w-8 h-8 bg-gradient-to-r from-yellow-400 to-red-500 rounded-full flex items-center justify-center">
                             <i class="fas fa-dragon text-white text-sm"></i>
                         </div>
-                        <h3 class="text-xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent dark:from-purple-400 dark:to-pink-400">FakemonDex</h3>
+                        <h3 class="text-xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent darkj:from-purple-400 darkj:to-pink-400">FakemonDex</h3>
                     </div>
-                    <p class="text-gray-600 dark:text-gray-300 mb-4" data-i18n="footer_desc">A plataforma definitiva para artistas compartilharem suas criações de Fakemons.</p>
+                    <p class="text-gray-600 darkj:text-gray-300 mb-4" data-i18n="footer_desc">A plataforma definitiva para artistas compartilharem suas criações de Fakemons.</p>
                     <div class="flex space-x-4">
-                        <a href="#" class="text-gray-600 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400">
+                        <a href="#" class="text-gray-600 darkj:text-gray-300 hover:text-purple-600 darkj:hover:text-purple-400">
                             <i class="fab fa-twitter"></i>
                         </a>
-                        <a href="#" class="text-gray-600 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400">
+                        <a href="#" class="text-gray-600 darkj:text-gray-300 hover:text-purple-600 darkj:hover:text-purple-400">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="#" class="text-gray-600 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400">
+                        <a href="#" class="text-gray-600 darkj:text-gray-300 hover:text-purple-600 darkj:hover:text-purple-400">
                             <i class="fab fa-discord"></i>
                         </a>
-                        <a href="#" class="text-gray-600 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400">
+                        <a href="#" class="text-gray-600 darkj:text-gray-300 hover:text-purple-600 darkj:hover:text-purple-400">
                             <i class="fab fa-github"></i>
                         </a>
                     </div>
                 </div>
                 
                 <div>
-                    <h4 class="font-semibold text-lg mb-4 text-gray-800 dark:text-white" data-i18n="footer_explore">Explorar</h4>
+                    <h4 class="font-semibold text-lg mb-4 text-gray-800 darkj:text-white" data-i18n="footer_explore">Explorar</h4>
                     <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-600 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400" data-i18n="footer_fakemons">Fakemons</a></li>
-                        <li><a href="#" class="text-gray-600 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400" data-i18n="footer_artists">Artistas</a></li>
-                        <li><a href="#" class="text-gray-600 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400" data-i18n="footer_types">Tipos</a></li>
-                        <li><a href="#" class="text-gray-600 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400" data-i18n="footer_trending">Em alta</a></li>
+                        <li><a href="#" class="text-gray-600 darkj:text-gray-300 hover:text-purple-600 darkj:hover:text-purple-400" data-i18n="footer_fakemons">Fakemons</a></li>
+                        <li><a href="#" class="text-gray-600 darkj:text-gray-300 hover:text-purple-600 darkj:hover:text-purple-400" data-i18n="footer_artists">Artistas</a></li>
+                        <li><a href="#" class="text-gray-600 darkj:text-gray-300 hover:text-purple-600 darkj:hover:text-purple-400" data-i18n="footer_types">Tipos</a></li>
+                        <li><a href="#" class="text-gray-600 darkj:text-gray-300 hover:text-purple-600 darkj:hover:text-purple-400" data-i18n="footer_trending">Em alta</a></li>
                     </ul>
                 </div>
                 
                 <div>
-                    <h4 class="font-semibold text-lg mb-4 text-gray-800 dark:text-white" data-i18n="footer_community">Comunidade</h4>
+                    <h4 class="font-semibold text-lg mb-4 text-gray-800 darkj:text-white" data-i18n="footer_community">Comunidade</h4>
                     <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-600 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400" data-i18n="footer_guidelines">Diretrizes</a></li>
-                        <li><a href="#" class="text-gray-600 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400" data-i18n="footer_forum">Fórum</a></li>
-                        <li><a href="#" class="text-gray-600 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400" data-i18n="footer_discord">Discord</a></li>
-                        <li><a href="#" class="text-gray-600 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400" data-i18n="footer_contribute">Contribuir</a></li>
+                        <li><a href="#" class="text-gray-600 darkj:text-gray-300 hover:text-purple-600 darkj:hover:text-purple-400" data-i18n="footer_guidelines">Diretrizes</a></li>
+                        <li><a href="#" class="text-gray-600 darkj:text-gray-300 hover:text-purple-600 darkj:hover:text-purple-400" data-i18n="footer_forum">Fórum</a></li>
+                        <li><a href="#" class="text-gray-600 darkj:text-gray-300 hover:text-purple-600 darkj:hover:text-purple-400" data-i18n="footer_discord">Discord</a></li>
+                        <li><a href="#" class="text-gray-600 darkj:text-gray-300 hover:text-purple-600 darkj:hover:text-purple-400" data-i18n="footer_contribute">Contribuir</a></li>
                     </ul>
                 </div>
                 
                 <div>
-                    <h4 class="font-semibold text-lg mb-4 text-gray-800 dark:text-white" data-i18n="footer_legal">Legal</h4>
+                    <h4 class="font-semibold text-lg mb-4 text-gray-800 darkj:text-white" data-i18n="footer_legal">Legal</h4>
                     <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-600 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400" data-i18n="footer_terms">Termos</a></li>
-                        <li><a href="#" class="text-gray-600 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400" data-i18n="footer_privacy">Privacidade</a></li>
-                        <li><a href="#" class="text-gray-600 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400" data-i18n="footer_cookies">Cookies</a></li>
-                        <li><a href="#" class="text-gray-600 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400" data-i18n="footer_contact">Contato</a></li>
+                        <li><a href="#" class="text-gray-600 darkj:text-gray-300 hover:text-purple-600 darkj:hover:text-purple-400" data-i18n="footer_terms">Termos</a></li>
+                        <li><a href="#" class="text-gray-600 darkj:text-gray-300 hover:text-purple-600 darkj:hover:text-purple-400" data-i18n="footer_privacy">Privacidade</a></li>
+                        <li><a href="#" class="text-gray-600 darkj:text-gray-300 hover:text-purple-600 darkj:hover:text-purple-400" data-i18n="footer_cookies">Cookies</a></li>
+                        <li><a href="#" class="text-gray-600 darkj:text-gray-300 hover:text-purple-600 darkj:hover:text-purple-400" data-i18n="footer_contact">Contato</a></li>
                     </ul>
                 </div>
             </div>
             
-            <div class="border-t border-gray-200 dark:border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-gray-500 dark:text-gray-400 mb-4 md:mb-0" data-i18n="footer_copyright">© 2023 FakemonDex. Todos os direitos reservados.</p>
+            <div class="border-t border-gray-200 darkj:border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 darkj:text-gray-400 mb-4 md:mb-0" data-i18n="footer_copyright">© 2023 FakemonDex. Todos os direitos reservados.</p>
                 <div class="flex space-x-6">
-                    <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400" data-i18n="footer_status">Status</a>
-                    <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400" data-i18n="footer_changelog">Changelog</a>
-                    <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400" data-i18n="footer_license">Licença</a>
+                    <a href="#" class="text-gray-500 darkj:text-gray-400 hover:text-purple-600 darkj:hover:text-purple-400" data-i18n="footer_status">Status</a>
+                    <a href="#" class="text-gray-500 darkj:text-gray-400 hover:text-purple-600 darkj:hover:text-purple-400" data-i18n="footer_changelog">Changelog</a>
+                    <a href="#" class="text-gray-500 darkj:text-gray-400 hover:text-purple-600 darkj:hover:text-purple-400" data-i18n="footer_license">Licença</a>
                 </div>
             </div>
         </div>
@@ -221,51 +222,51 @@
 
     <!-- Fakemon Modal (hidden by default) -->
     <div id="fakemon-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 hidden">
-        <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+        <div class="bg-white darkj:bg-gray-800 rounded-2xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
             <div class="p-6">
                 <div class="flex justify-between items-start mb-6">
                     <div>
-                        <h3 id="modal-fakemon-name" class="text-2xl font-bold text-gray-800 dark:text-white">Fakemon Name</h3>
+                        <h3 id="modal-fakemon-name" class="text-2xl font-bold text-gray-800 darkj:text-white">Fakemon Name</h3>
                         <div id="modal-fakemon-types" class="flex space-x-2 mt-2">
                             <!-- Types will be added here -->
                         </div>
                     </div>
-                    <button id="close-modal" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700">
-                        <i class="fas fa-times text-gray-500 dark:text-gray-400"></i>
+                    <button id="close-modal" class="p-2 rounded-full hover:bg-gray-200 darkj:hover:bg-gray-700">
+                        <i class="fas fa-times text-gray-500 darkj:text-gray-400"></i>
                     </button>
                 </div>
                 
                 <div class="grid md:grid-cols-2 gap-6">
                     <div>
-                        <div class="bg-gray-100 dark:bg-gray-700 rounded-xl p-4 mb-4">
+                        <div class="bg-gray-100 darkj:bg-gray-700 rounded-xl p-4 mb-4">
                             <img id="modal-fakemon-image" src="" alt="Fakemon" class="w-full h-64 object-contain rounded-lg">
                         </div>
                         <div class="grid grid-cols-2 gap-4 mb-6">
-                            <div class="bg-gray-100 dark:bg-gray-700 p-3 rounded-lg">
-                                <p class="text-sm text-gray-500 dark:text-gray-400" data-i18n="modal_height">Altura</p>
-                                <p id="modal-fakemon-height" class="font-semibold text-gray-800 dark:text-white">1.2m</p>
+                            <div class="bg-gray-100 darkj:bg-gray-700 p-3 rounded-lg">
+                                <p class="text-sm text-gray-500 darkj:text-gray-400" data-i18n="modal_height">Altura</p>
+                                <p id="modal-fakemon-height" class="font-semibold text-gray-800 darkj:text-white">1.2m</p>
                             </div>
-                            <div class="bg-gray-100 dark:bg-gray-700 p-3 rounded-lg">
-                                <p class="text-sm text-gray-500 dark:text-gray-400" data-i18n="modal_weight">Peso</p>
-                                <p id="modal-fakemon-weight" class="font-semibold text-gray-800 dark:text-white">25.4kg</p>
+                            <div class="bg-gray-100 darkj:bg-gray-700 p-3 rounded-lg">
+                                <p class="text-sm text-gray-500 darkj:text-gray-400" data-i18n="modal_weight">Peso</p>
+                                <p id="modal-fakemon-weight" class="font-semibold text-gray-800 darkj:text-white">25.4kg</p>
                             </div>
                         </div>
                     </div>
                     
                     <div>
                         <div class="mb-6">
-                            <h4 class="font-semibold text-lg mb-2 text-gray-800 dark:text-white" data-i18n="modal_description">Descrição</h4>
-                            <p id="modal-fakemon-description" class="text-gray-600 dark:text-gray-300">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <h4 class="font-semibold text-lg mb-2 text-gray-800 darkj:text-white" data-i18n="modal_description">Descrição</h4>
+                            <p id="modal-fakemon-description" class="text-gray-600 darkj:text-gray-300">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                         </div>
                         
                         <div class="mb-6">
-                            <h4 class="font-semibold text-lg mb-2 text-gray-800 dark:text-white" data-i18n="modal_artist">Artista</h4>
+                            <h4 class="font-semibold text-lg mb-2 text-gray-800 darkj:text-white" data-i18n="modal_artist">Artista</h4>
                             <div class="flex items-center space-x-3">
                                 <div class="w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center text-white">
                                     <i class="fas fa-user"></i>
                                 </div>
                                 <div>
-                                    <p id="modal-fakemon-artist" class="font-medium text-gray-800 dark:text-white">Artist Name</p>
+                                    <p id="modal-fakemon-artist" class="font-medium text-gray-800 darkj:text-white">Artist Name</p>
                                     <div id="modal-fakemon-social" class="flex space-x-2 mt-1">
                                         <!-- Social links will be added here -->
                                     </div>
@@ -273,42 +274,42 @@
                             </div>
                         </div>
                         
-                        <div class="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg">
-                            <h4 class="font-semibold text-lg mb-2 text-gray-800 dark:text-white" data-i18n="modal_stats">Estatísticas</h4>
+                        <div class="bg-gray-100 darkj:bg-gray-700 p-4 rounded-lg">
+                            <h4 class="font-semibold text-lg mb-2 text-gray-800 darkj:text-white" data-i18n="modal_stats">Estatísticas</h4>
                             <div class="space-y-3">
                                 <div>
                                     <div class="flex justify-between mb-1">
-                                        <span class="text-sm font-medium text-gray-800 dark:text-white" data-i18n="modal_hp">HP</span>
-                                        <span id="modal-fakemon-hp" class="text-sm text-gray-600 dark:text-gray-300">80</span>
+                                        <span class="text-sm font-medium text-gray-800 darkj:text-white" data-i18n="modal_hp">HP</span>
+                                        <span id="modal-fakemon-hp" class="text-sm text-gray-600 darkj:text-gray-300">80</span>
                                     </div>
-                                    <div class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2">
+                                    <div class="w-full bg-gray-200 darkj:bg-gray-600 rounded-full h-2">
                                         <div id="modal-fakemon-hp-bar" class="bg-green-500 h-2 rounded-full" style="width: 80%"></div>
                                     </div>
                                 </div>
                                 <div>
                                     <div class="flex justify-between mb-1">
-                                        <span class="text-sm font-medium text-gray-800 dark:text-white" data-i18n="modal_attack">Ataque</span>
-                                        <span id="modal-fakemon-attack" class="text-sm text-gray-600 dark:text-gray-300">95</span>
+                                        <span class="text-sm font-medium text-gray-800 darkj:text-white" data-i18n="modal_attack">Ataque</span>
+                                        <span id="modal-fakemon-attack" class="text-sm text-gray-600 darkj:text-gray-300">95</span>
                                     </div>
-                                    <div class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2">
+                                    <div class="w-full bg-gray-200 darkj:bg-gray-600 rounded-full h-2">
                                         <div id="modal-fakemon-attack-bar" class="bg-red-500 h-2 rounded-full" style="width: 95%"></div>
                                     </div>
                                 </div>
                                 <div>
                                     <div class="flex justify-between mb-1">
-                                        <span class="text-sm font-medium text-gray-800 dark:text-white" data-i18n="modal_defense">Defesa</span>
-                                        <span id="modal-fakemon-defense" class="text-sm text-gray-600 dark:text-gray-300">75</span>
+                                        <span class="text-sm font-medium text-gray-800 darkj:text-white" data-i18n="modal_defense">Defesa</span>
+                                        <span id="modal-fakemon-defense" class="text-sm text-gray-600 darkj:text-gray-300">75</span>
                                     </div>
-                                    <div class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2">
+                                    <div class="w-full bg-gray-200 darkj:bg-gray-600 rounded-full h-2">
                                         <div id="modal-fakemon-defense-bar" class="bg-blue-500 h-2 rounded-full" style="width: 75%"></div>
                                     </div>
                                 </div>
                                 <div>
                                     <div class="flex justify-between mb-1">
-                                        <span class="text-sm font-medium text-gray-800 dark:text-white" data-i18n="modal_speed">Velocidade</span>
-                                        <span id="modal-fakemon-speed" class="text-sm text-gray-600 dark:text-gray-300">110</span>
+                                        <span class="text-sm font-medium text-gray-800 darkj:text-white" data-i18n="modal_speed">Velocidade</span>
+                                        <span id="modal-fakemon-speed" class="text-sm text-gray-600 darkj:text-gray-300">110</span>
                                     </div>
-                                    <div class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2">
+                                    <div class="w-full bg-gray-200 darkj:bg-gray-600 rounded-full h-2">
                                         <div id="modal-fakemon-speed-bar" class="bg-yellow-500 h-2 rounded-full" style="width: 110%"></div>
                                     </div>
                                 </div>
@@ -322,24 +323,24 @@
 
     <!-- Add Fakemon Modal (hidden by default) -->
     <div id="add-fakemon-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 hidden">
-        <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+        <div class="bg-white darkj:bg-gray-800 rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
             <div class="p-6">
                 <div class="flex justify-between items-center mb-6">
-                    <h3 class="text-2xl font-bold text-gray-800 dark:text-white" data-i18n="add_modal_title">Adicionar Fakemon</h3>
-                    <button id="close-add-modal" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700">
-                        <i class="fas fa-times text-gray-500 dark:text-gray-400"></i>
+                    <h3 class="text-2xl font-bold text-gray-800 darkj:text-white" data-i18n="add_modal_title">Adicionar Fakemon</h3>
+                    <button id="close-add-modal" class="p-2 rounded-full hover:bg-gray-200 darkj:hover:bg-gray-700">
+                        <i class="fas fa-times text-gray-500 darkj:text-gray-400"></i>
                     </button>
                 </div>
                 
                 <form id="add-fakemon-form" class="space-y-4">
                     <div>
-                        <label for="fakemon-name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" data-i18n="add_modal_name">Nome do Fakemon</label>
-                        <input type="text" id="fakemon-name" required class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 dark:bg-gray-700 dark:text-white">
+                        <label for="fakemon-name" class="block text-sm font-medium text-gray-700 darkj:text-gray-300 mb-1" data-i18n="add_modal_name">Nome do Fakemon</label>
+                        <input type="text" id="fakemon-name" required class="w-full px-4 py-2 border border-gray-300 darkj:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 darkj:bg-gray-700 darkj:text-white">
                     </div>
                     
                     <div>
-                        <label for="fakemon-types" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" data-i18n="add_modal_types">Tipos</label>
-                        <select id="fakemon-types" multiple class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 dark:bg-gray-700 dark:text-white">
+                        <label for="fakemon-types" class="block text-sm font-medium text-gray-700 darkj:text-gray-300 mb-1" data-i18n="add_modal_types">Tipos</label>
+                        <select id="fakemon-types" multiple class="w-full px-4 py-2 border border-gray-300 darkj:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 darkj:bg-gray-700 darkj:text-white">
                             <option value="fire" data-i18n="type_fire">Fogo</option>
                             <option value="water" data-i18n="type_water">Água</option>
                             <option value="grass" data-i18n="type_grass">Planta</option>
@@ -354,50 +355,50 @@
                             <option value="rock" data-i18n="type_rock">Pedra</option>
                             <option value="ghost" data-i18n="type_ghost">Fantasma</option>
                             <option value="dragon" data-i18n="type_dragon">Dragão</option>
-                            <option value="dark" data-i18n="type_dark">Sombrio</option>
+                            <option value="darkj" data-i18n="type_darkj">Sombrio</option>
                             <option value="steel" data-i18n="type_steel">Metálico</option>
                             <option value="fairy" data-i18n="type_fairy">Fada</option>
                         </select>
                     </div>
                     
                     <div>
-                        <label for="fakemon-description" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" data-i18n="add_modal_description">Descrição</label>
-                        <textarea id="fakemon-description" rows="3" required class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 dark:bg-gray-700 dark:text-white"></textarea>
+                        <label for="fakemon-description" class="block text-sm font-medium text-gray-700 darkj:text-gray-300 mb-1" data-i18n="add_modal_description">Descrição</label>
+                        <textarea id="fakemon-description" rows="3" required class="w-full px-4 py-2 border border-gray-300 darkj:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 darkj:bg-gray-700 darkj:text-white"></textarea>
                     </div>
                     
                     <div class="grid grid-cols-2 gap-4">
                         <div>
-                            <label for="fakemon-height" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" data-i18n="add_modal_height">Altura (m)</label>
-                            <input type="number" step="0.1" id="fakemon-height" required class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 dark:bg-gray-700 dark:text-white">
+                            <label for="fakemon-height" class="block text-sm font-medium text-gray-700 darkj:text-gray-300 mb-1" data-i18n="add_modal_height">Altura (m)</label>
+                            <input type="number" step="0.1" id="fakemon-height" required class="w-full px-4 py-2 border border-gray-300 darkj:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 darkj:bg-gray-700 darkj:text-white">
                         </div>
                         <div>
-                            <label for="fakemon-weight" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" data-i18n="add_modal_weight">Peso (kg)</label>
-                            <input type="number" step="0.1" id="fakemon-weight" required class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 dark:bg-gray-700 dark:text-white">
+                            <label for="fakemon-weight" class="block text-sm font-medium text-gray-700 darkj:text-gray-300 mb-1" data-i18n="add_modal_weight">Peso (kg)</label>
+                            <input type="number" step="0.1" id="fakemon-weight" required class="w-full px-4 py-2 border border-gray-300 darkj:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 darkj:bg-gray-700 darkj:text-white">
                         </div>
                     </div>
                     
                     <div class="grid grid-cols-2 gap-4">
                         <div>
-                            <label for="fakemon-hp" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" data-i18n="add_modal_hp">HP</label>
-                            <input type="number" id="fakemon-hp" min="1" max="255" required class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 dark:bg-gray-700 dark:text-white">
+                            <label for="fakemon-hp" class="block text-sm font-medium text-gray-700 darkj:text-gray-300 mb-1" data-i18n="add_modal_hp">HP</label>
+                            <input type="number" id="fakemon-hp" min="1" max="255" required class="w-full px-4 py-2 border border-gray-300 darkj:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 darkj:bg-gray-700 darkj:text-white">
                         </div>
                         <div>
-                            <label for="fakemon-attack" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" data-i18n="add_modal_attack">Ataque</label>
-                            <input type="number" id="fakemon-attack" min="1" max="255" required class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 dark:bg-gray-700 dark:text-white">
+                            <label for="fakemon-attack" class="block text-sm font-medium text-gray-700 darkj:text-gray-300 mb-1" data-i18n="add_modal_attack">Ataque</label>
+                            <input type="number" id="fakemon-attack" min="1" max="255" required class="w-full px-4 py-2 border border-gray-300 darkj:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 darkj:bg-gray-700 darkj:text-white">
                         </div>
                         <div>
-                            <label for="fakemon-defense" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" data-i18n="add_modal_defense">Defesa</label>
-                            <input type="number" id="fakemon-defense" min="1" max="255" required class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 dark:bg-gray-700 dark:text-white">
+                            <label for="fakemon-defense" class="block text-sm font-medium text-gray-700 darkj:text-gray-300 mb-1" data-i18n="add_modal_defense">Defesa</label>
+                            <input type="number" id="fakemon-defense" min="1" max="255" required class="w-full px-4 py-2 border border-gray-300 darkj:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 darkj:bg-gray-700 darkj:text-white">
                         </div>
                         <div>
-                            <label for="fakemon-speed" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" data-i18n="add_modal_speed">Velocidade</label>
-                            <input type="number" id="fakemon-speed" min="1" max="255" required class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 dark:bg-gray-700 dark:text-white">
+                            <label for="fakemon-speed" class="block text-sm font-medium text-gray-700 darkj:text-gray-300 mb-1" data-i18n="add_modal_speed">Velocidade</label>
+                            <input type="number" id="fakemon-speed" min="1" max="255" required class="w-full px-4 py-2 border border-gray-300 darkj:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 darkj:bg-gray-700 darkj:text-white">
                         </div>
                     </div>
                     
                     <div>
-                        <label for="fakemon-image" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" data-i18n="add_modal_image">Imagem</label>
-                        <input type="file" id="fakemon-image" accept="image/*" required class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 dark:bg-gray-700 dark:text-white">
+                        <label for="fakemon-image" class="block text-sm font-medium text-gray-700 darkj:text-gray-300 mb-1" data-i18n="add_modal_image">Imagem</label>
+                        <input type="file" id="fakemon-image" accept="image/*" required class="w-full px-4 py-2 border border-gray-300 darkj:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 darkj:bg-gray-700 darkj:text-white">
                     </div>
                     
                     <div class="pt-4">
@@ -412,37 +413,37 @@
 
     <!-- Auth Modal (hidden by default) -->
     <div id="auth-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 hidden">
-        <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl max-w-md w-full">
+        <div class="bg-white darkj:bg-gray-800 rounded-2xl shadow-2xl max-w-md w-full">
             <div class="p-6">
                 <div class="flex justify-between items-center mb-6">
-                    <h3 id="auth-modal-title" class="text-2xl font-bold text-gray-800 dark:text-white">Entrar</h3>
-                    <button id="close-auth-modal" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700">
-                        <i class="fas fa-times text-gray-500 dark:text-gray-400"></i>
+                    <h3 id="auth-modal-title" class="text-2xl font-bold text-gray-800 darkj:text-white">Entrar</h3>
+                    <button id="close-auth-modal" class="p-2 rounded-full hover:bg-gray-200 darkj:hover:bg-gray-700">
+                        <i class="fas fa-times text-gray-500 darkj:text-gray-400"></i>
                     </button>
                 </div>
                 
-                <div id="auth-tabs" class="flex border-b border-gray-200 dark:border-gray-700 mb-6">
-                    <button id="login-tab" class="px-4 py-2 font-medium text-purple-600 dark:text-purple-400 border-b-2 border-purple-600 dark:border-purple-400" data-i18n="login">Entrar</button>
-                    <button id="register-tab" class="px-4 py-2 font-medium text-gray-500 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400" data-i18n="register">Cadastrar</button>
+                <div id="auth-tabs" class="flex border-b border-gray-200 darkj:border-gray-700 mb-6">
+                    <button id="login-tab" class="px-4 py-2 font-medium text-purple-600 darkj:text-purple-400 border-b-2 border-purple-600 darkj:border-purple-400" data-i18n="login">Entrar</button>
+                    <button id="register-tab" class="px-4 py-2 font-medium text-gray-500 darkj:text-gray-400 hover:text-purple-600 darkj:hover:text-purple-400" data-i18n="register">Cadastrar</button>
                 </div>
                 
                 <form id="login-form" class="space-y-4">
                     <div>
-                        <label for="login-email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" data-i18n="auth_email">Email</label>
-                        <input type="email" id="login-email" required class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 dark:bg-gray-700 dark:text-white">
+                        <label for="login-email" class="block text-sm font-medium text-gray-700 darkj:text-gray-300 mb-1" data-i18n="auth_email">Email</label>
+                        <input type="email" id="login-email" required class="w-full px-4 py-2 border border-gray-300 darkj:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 darkj:bg-gray-700 darkj:text-white">
                     </div>
                     
                     <div>
-                        <label for="login-password" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" data-i18n="auth_password">Senha</label>
-                        <input type="password" id="login-password" required class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 dark:bg-gray-700 dark:text-white">
+                        <label for="login-password" class="block text-sm font-medium text-gray-700 darkj:text-gray-300 mb-1" data-i18n="auth_password">Senha</label>
+                        <input type="password" id="login-password" required class="w-full px-4 py-2 border border-gray-300 darkj:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 darkj:bg-gray-700 darkj:text-white">
                     </div>
                     
                     <div class="flex items-center justify-between">
                         <div class="flex items-center">
-                            <input id="remember-me" type="checkbox" class="h-4 w-4 text-purple-600 focus:ring-purple-500 border-gray-300 dark:border-gray-600 rounded dark:bg-gray-700">
-                            <label for="remember-me" class="ml-2 block text-sm text-gray-700 dark:text-gray-300" data-i18n="auth_remember">Lembrar de mim</label>
+                            <input id="remember-me" type="checkbox" class="h-4 w-4 text-purple-600 focus:ring-purple-500 border-gray-300 darkj:border-gray-600 rounded darkj:bg-gray-700">
+                            <label for="remember-me" class="ml-2 block text-sm text-gray-700 darkj:text-gray-300" data-i18n="auth_remember">Lembrar de mim</label>
                         </div>
-                        <a href="#" class="text-sm text-purple-600 dark:text-purple-400 hover:underline" data-i18n="auth_forgot">Esqueceu a senha?</a>
+                        <a href="#" class="text-sm text-purple-600 darkj:text-purple-400 hover:underline" data-i18n="auth_forgot">Esqueceu a senha?</a>
                     </div>
                     
                     <div class="pt-2">
@@ -454,29 +455,29 @@
                 
                 <form id="register-form" class="space-y-4 hidden">
                     <div>
-                        <label for="register-username" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" data-i18n="auth_username">Nome de usuário</label>
-                        <input type="text" id="register-username" required class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 dark:bg-gray-700 dark:text-white">
+                        <label for="register-username" class="block text-sm font-medium text-gray-700 darkj:text-gray-300 mb-1" data-i18n="auth_username">Nome de usuário</label>
+                        <input type="text" id="register-username" required class="w-full px-4 py-2 border border-gray-300 darkj:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 darkj:bg-gray-700 darkj:text-white">
                     </div>
                     
                     <div>
-                        <label for="register-email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" data-i18n="auth_email">Email</label>
-                        <input type="email" id="register-email" required class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 dark:bg-gray-700 dark:text-white">
+                        <label for="register-email" class="block text-sm font-medium text-gray-700 darkj:text-gray-300 mb-1" data-i18n="auth_email">Email</label>
+                        <input type="email" id="register-email" required class="w-full px-4 py-2 border border-gray-300 darkj:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 darkj:bg-gray-700 darkj:text-white">
                     </div>
                     
                     <div>
-                        <label for="register-password" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" data-i18n="auth_password">Senha</label>
-                        <input type="password" id="register-password" required class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 dark:bg-gray-700 dark:text-white">
+                        <label for="register-password" class="block text-sm font-medium text-gray-700 darkj:text-gray-300 mb-1" data-i18n="auth_password">Senha</label>
+                        <input type="password" id="register-password" required class="w-full px-4 py-2 border border-gray-300 darkj:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 darkj:bg-gray-700 darkj:text-white">
                     </div>
                     
                     <div>
-                        <label for="register-confirm-password" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" data-i18n="auth_confirm">Confirmar senha</label>
-                        <input type="password" id="register-confirm-password" required class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 dark:bg-gray-700 dark:text-white">
+                        <label for="register-confirm-password" class="block text-sm font-medium text-gray-700 darkj:text-gray-300 mb-1" data-i18n="auth_confirm">Confirmar senha</label>
+                        <input type="password" id="register-confirm-password" required class="w-full px-4 py-2 border border-gray-300 darkj:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 darkj:bg-gray-700 darkj:text-white">
                     </div>
                     
                     <div class="flex items-center">
-                        <input id="accept-terms" type="checkbox" required class="h-4 w-4 text-purple-600 focus:ring-purple-500 border-gray-300 dark:border-gray-600 rounded dark:bg-gray-700">
-                        <label for="accept-terms" class="ml-2 block text-sm text-gray-700 dark:text-gray-300" data-i18n="auth_terms">
-                            Eu concordo com os <a href="#" class="text-purple-600 dark:text-purple-400 hover:underline">Termos de Serviço</a>
+                        <input id="accept-terms" type="checkbox" required class="h-4 w-4 text-purple-600 focus:ring-purple-500 border-gray-300 darkj:border-gray-600 rounded darkj:bg-gray-700">
+                        <label for="accept-terms" class="ml-2 block text-sm text-gray-700 darkj:text-gray-300" data-i18n="auth_terms">
+                            Eu concordo com os <a href="#" class="text-purple-600 darkj:text-purple-400 hover:underline">Termos de Serviço</a>
                         </label>
                     </div>
                     
@@ -490,19 +491,19 @@
                 <div class="mt-6">
                     <div class="relative">
                         <div class="absolute inset-0 flex items-center">
-                            <div class="w-full border-t border-gray-300 dark:border-gray-600"></div>
+                            <div class="w-full border-t border-gray-300 darkj:border-gray-600"></div>
                         </div>
                         <div class="relative flex justify-center text-sm">
-                            <span class="px-2 bg-white dark:bg-gray-800 text-gray-500 dark:text-gray-400" data-i18n="auth_or">Ou continue com</span>
+                            <span class="px-2 bg-white darkj:bg-gray-800 text-gray-500 darkj:text-gray-400" data-i18n="auth_or">Ou continue com</span>
                         </div>
                     </div>
                     
                     <div class="mt-6 grid grid-cols-2 gap-3">
-                        <a href="#" class="w-full inline-flex justify-center py-2 px-4 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm bg-white dark:bg-gray-700 text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-600">
+                        <a href="#" class="w-full inline-flex justify-center py-2 px-4 border border-gray-300 darkj:border-gray-600 rounded-md shadow-sm bg-white darkj:bg-gray-700 text-sm font-medium text-gray-700 darkj:text-gray-300 hover:bg-gray-50 darkj:hover:bg-gray-600">
                             <i class="fab fa-google text-red-500 mr-2"></i>
                             <span data-i18n="auth_google">Google</span>
                         </a>
-                        <a href="#" class="w-full inline-flex justify-center py-2 px-4 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm bg-white dark:bg-gray-700 text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-600">
+                        <a href="#" class="w-full inline-flex justify-center py-2 px-4 border border-gray-300 darkj:border-gray-600 rounded-md shadow-sm bg-white darkj:bg-gray-700 text-sm font-medium text-gray-700 darkj:text-gray-300 hover:bg-gray-50 darkj:hover:bg-gray-600">
                             <i class="fab fa-twitter text-blue-400 mr-2"></i>
                             <span data-i18n="auth_twitter">Twitter</span>
                         </a>

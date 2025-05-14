@@ -15,9 +15,9 @@
 </head>
 
 <body
-    class="bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-900 dark:to-gray-800 min-h-screen transition-colors duration-300">
+    class="bg-gradient-to-br from-blue-50 to-purple-50 darkj:from-gray-900 darkj:to-gray-800 min-h-screen transition-colors duration-300">
     <!-- Header -->
-    <header class="sticky top-0 z-50 backdrop-blur-md bg-white/70 dark:bg-gray-900/70 shadow-sm">
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-white/70 darkj:bg-gray-900/70 shadow-sm">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center space-x-2">
                 <div
@@ -25,7 +25,7 @@
                     <i class="fas fa-dragon text-white text-xl"></i>
                 </div>
                 <h1
-                    class="text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent dark:from-purple-400 dark:to-pink-400">
+                    class="text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent darkj:from-purple-400 darkj:to-pink-400">
                     FakemonDex</h1>
             </div>
             <div class="flex items-center space-x-4">
@@ -35,9 +35,9 @@
                     <span data-i18n="add_fakemon">Novo Fakemon</span>
                 </a>
                 <button id="theme-toggle"
-                    class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
-                    <i class="fas fa-moon dark:hidden text-gray-700"></i>
-                    <i class="fas fa-sun hidden dark:block text-yellow-300"></i>
+                    class="p-2 rounded-full hover:bg-gray-200 darkj:hover:bg-gray-700 transition-colors">
+                    <i class="fas fa-moon darkj:hidden text-gray-700"></i>
+                    <i class="fas fa-sun hidden darkj:block text-yellow-300"></i>
                 </button>
             </div>
         </div>
@@ -46,9 +46,9 @@
     <!-- Main Content -->
     <main class="container mx-auto px-4 py-8">
         <!-- Filtros -->
-        <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 mb-8">
+        <div class="bg-white darkj:bg-gray-800 rounded-2xl shadow-lg p-6 mb-8">
             <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-                <h2 class="text-2xl font-bold text-gray-800 dark:text-white flex items-center gap-2">
+                <h2 class="text-2xl font-bold text-gray-800 darkj:text-white flex items-center gap-2">
                     <i class="fas fa-list text-purple-500"></i>
                     <span data-i18n="all_fakemons">Catálogo Completo</span>
                 </h2>
@@ -57,21 +57,21 @@
                     <!-- Busca -->
                     <div class="relative flex-grow md:flex-grow-0 md:w-64">
                         <input type="text" placeholder="Buscar Fakemon..."
-                            class="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-full focus:ring-2 focus:ring-purple-500 focus:border-purple-500 dark:bg-gray-700 dark:text-white transition-colors"
+                            class="w-full pl-10 pr-4 py-2 border border-gray-300 darkj:border-gray-600 rounded-full focus:ring-2 focus:ring-purple-500 focus:border-purple-500 darkj:bg-gray-700 darkj:text-white transition-colors"
                             id="search-fakemon">
-                        <i class="fas fa-search absolute left-3 top-3 text-gray-400 dark:text-gray-300"></i>
+                        <i class="fas fa-search absolute left-3 top-3 text-gray-400 darkj:text-gray-300"></i>
                     </div>
 
                     <!-- Filtro por Tipo -->
                     <div class="relative group">
                         <button
-                            class="px-4 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-full flex items-center gap-2 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
-                            <i class="fas fa-filter text-gray-600 dark:text-gray-300"></i>
+                            class="px-4 py-2 bg-white darkj:bg-gray-800 border border-gray-300 darkj:border-gray-600 rounded-full flex items-center gap-2 hover:bg-gray-100 darkj:hover:bg-gray-700 transition-colors">
+                            <i class="fas fa-filter text-gray-600 darkj:text-gray-300"></i>
                             <span data-i18n="filter_type">Tipo</span>
                         </button>
                         <div
-                            class="absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-lg shadow-xl py-2 z-50 hidden group-hover:block border border-gray-200 dark:border-gray-700">
-                            <div class="px-3 py-1 text-sm text-gray-700 dark:text-gray-300" data-i18n="filter_type">
+                            class="absolute right-0 mt-2 w-48 bg-white darkj:bg-gray-800 rounded-lg shadow-xl py-2 z-50 hidden group-hover:block border border-gray-200 darkj:border-gray-700">
+                            <div class="px-3 py-1 text-sm text-gray-700 darkj:text-gray-300" data-i18n="filter_type">
                                 Filtrar por tipo</div>
                             <div class="grid grid-cols-2 gap-2 px-3 py-2" id="type-filters">
                                 <!-- JS vai preencher aqui -->
@@ -82,23 +82,23 @@
                     <!-- Ordenação -->
                     <div class="relative group">
                         <button
-                            class="px-4 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-full flex items-center gap-2 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
-                            <i class="fas fa-sort-amount-down text-gray-600 dark:text-gray-300"></i>
+                            class="px-4 py-2 bg-white darkj:bg-gray-800 border border-gray-300 darkj:border-gray-600 rounded-full flex items-center gap-2 hover:bg-gray-100 darkj:hover:bg-gray-700 transition-colors">
+                            <i class="fas fa-sort-amount-down text-gray-600 darkj:text-gray-300"></i>
                             <span data-i18n="sort_by">Ordenar</span>
                         </button>
                         <div
-                            class="absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-lg shadow-xl py-1 z-50 hidden group-hover:block border border-gray-200 dark:border-gray-700">
+                            class="absolute right-0 mt-2 w-48 bg-white darkj:bg-gray-800 rounded-lg shadow-xl py-1 z-50 hidden group-hover:block border border-gray-200 darkj:border-gray-700">
                             <a href="#"
-                                class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-purple-50 dark:hover:bg-gray-700 transition-colors"
+                                class="block px-4 py-2 text-sm text-gray-700 darkj:text-gray-300 hover:bg-purple-50 darkj:hover:bg-gray-700 transition-colors"
                                 data-sort="name-asc" data-i18n="sort_name_asc">Nome (A-Z)</a>
                             <a href="#"
-                                class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-purple-50 dark:hover:bg-gray-700 transition-colors"
+                                class="block px-4 py-2 text-sm text-gray-700 darkj:text-gray-300 hover:bg-purple-50 darkj:hover:bg-gray-700 transition-colors"
                                 data-sort="name-desc" data-i18n="sort_name_desc">Nome (Z-A)</a>
                             <a href="#"
-                                class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-purple-50 dark:hover:bg-gray-700 transition-colors"
+                                class="block px-4 py-2 text-sm text-gray-700 darkj:text-gray-300 hover:bg-purple-50 darkj:hover:bg-gray-700 transition-colors"
                                 data-sort="hp" data-i18n="sort_hp">HP (Maior)</a>
                             <a href="#"
-                                class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-purple-50 dark:hover:bg-gray-700 transition-colors"
+                                class="block px-4 py-2 text-sm text-gray-700 darkj:text-gray-300 hover:bg-purple-50 darkj:hover:bg-gray-700 transition-colors"
                                 data-sort="attack" data-i18n="sort_attack">Ataque (Maior)</a>
                         </div>
                     </div>
@@ -113,19 +113,19 @@
 
         <!-- Paginação -->
         <div class="flex justify-center mt-12">
-            <nav class="flex items-center gap-1 bg-white dark:bg-gray-800 rounded-full shadow-md p-1">
+            <nav class="flex items-center gap-1 bg-white darkj:bg-gray-800 rounded-full shadow-md p-1">
                 <button
-                    class="w-10 h-10 rounded-full flex items-center justify-center bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-purple-500 hover:text-white transition-colors">
+                    class="w-10 h-10 rounded-full flex items-center justify-center bg-gray-100 darkj:bg-gray-700 text-gray-700 darkj:text-gray-300 hover:bg-purple-500 hover:text-white transition-colors">
                     <i class="fas fa-chevron-left"></i>
                 </button>
                 <button
                     class="w-10 h-10 rounded-full flex items-center justify-center bg-purple-500 text-white">1</button>
                 <button
-                    class="w-10 h-10 rounded-full flex items-center justify-center bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-purple-500 hover:text-white transition-colors">2</button>
+                    class="w-10 h-10 rounded-full flex items-center justify-center bg-gray-100 darkj:bg-gray-700 text-gray-700 darkj:text-gray-300 hover:bg-purple-500 hover:text-white transition-colors">2</button>
                 <button
-                    class="w-10 h-10 rounded-full flex items-center justify-center bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-purple-500 hover:text-white transition-colors">3</button>
+                    class="w-10 h-10 rounded-full flex items-center justify-center bg-gray-100 darkj:bg-gray-700 text-gray-700 darkj:text-gray-300 hover:bg-purple-500 hover:text-white transition-colors">3</button>
                 <button
-                    class="w-10 h-10 rounded-full flex items-center justify-center bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-purple-500 hover:text-white transition-colors">
+                    class="w-10 h-10 rounded-full flex items-center justify-center bg-gray-100 darkj:bg-gray-700 text-gray-700 darkj:text-gray-300 hover:bg-purple-500 hover:text-white transition-colors">
                     <i class="fas fa-chevron-right"></i>
                 </button>
             </nav>
@@ -133,9 +133,9 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-100 dark:bg-gray-900/70 border-t border-gray-200 dark:border-gray-800 mt-12">
+    <footer class="bg-gray-100 darkj:bg-gray-900/70 border-t border-gray-200 darkj:border-gray-800 mt-12">
         <div class="container mx-auto px-4 py-8">
-            <div class="text-center text-gray-600 dark:text-gray-400 text-sm">
+            <div class="text-center text-gray-600 darkj:text-gray-400 text-sm">
                 © 2023 FakemonDex - <span data-i18n="footer_copyright">Todos os direitos reservados</span>
             </div>
         </div>
@@ -243,22 +243,22 @@
             const container = document.getElementById('all-fakemons');
             fakemons.forEach(fakemon => {
                 const card = document.createElement('div');
-                card.className = 'bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-lg transition-shadow overflow-hidden cursor-pointer';
+                card.className = 'bg-white darkj:bg-gray-800 rounded-xl shadow-md hover:shadow-lg transition-shadow overflow-hidden cursor-pointer';
                 card.innerHTML = `
                     <div class="relative">
-                        <div class="h-48 bg-gray-100 dark:bg-gray-700 flex items-center justify-center p-4">
+                        <div class="h-48 bg-gray-100 darkj:bg-gray-700 flex items-center justify-center p-4">
                             <img src="${fakemon.image}" alt="${fakemon.name}" class="h-full object-contain">
                         </div>
-                        <span class="absolute top-2 right-2 bg-white/90 dark:bg-gray-900/90 text-xs px-2 py-1 rounded-full">#${fakemon.id.toString().padStart(3, '0')}</span>
+                        <span class="absolute top-2 right-2 bg-white/90 darkj:bg-gray-900/90 text-xs px-2 py-1 rounded-full">#${fakemon.id.toString().padStart(3, '0')}</span>
                     </div>
                     <div class="p-4">
-                        <h3 class="font-bold text-lg text-gray-800 dark:text-white mb-2">${fakemon.name}</h3>
+                        <h3 class="font-bold text-lg text-gray-800 darkj:text-white mb-2">${fakemon.name}</h3>
                         <div class="flex gap-2 mb-3">
                             ${fakemon.types.map(type => `
                                 <span class="text-xs px-3 py-1 rounded-full ${typeColors[type]}">${type}</span>
                             `).join('')}
                         </div>
-                        <div class="flex justify-between text-sm text-gray-600 dark:text-gray-300">
+                        <div class="flex justify-between text-sm text-gray-600 darkj:text-gray-300">
                             <span>HP: ${fakemon.stats.hp}</span>
                             <span>ATQ: ${fakemon.stats.attack}</span>
                             <span>DEF: ${fakemon.stats.defense}</span>

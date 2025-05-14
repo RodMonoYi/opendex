@@ -31,15 +31,15 @@ body {
     background: #555;
 }
 
-.dark ::-webkit-scrollbar-track {
+.darkj ::-webkit-scrollbar-track {
     background: #374151;
 }
 
-.dark ::-webkit-scrollbar-thumb {
+.darkj ::-webkit-scrollbar-thumb {
     background: #6b7280;
 }
 
-.dark ::-webkit-scrollbar-thumb:hover {
+.darkj ::-webkit-scrollbar-thumb:hover {
     background: #9ca3af;
 }
 
@@ -80,10 +80,10 @@ body {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* Ajuste para inputs no dark mode */
-.dark #add-fakemon-form input,
-.dark #add-fakemon-form textarea,
-.dark #add-fakemon-form select {
+/* Ajuste para inputs no darkj mode */
+.darkj #add-fakemon-form input,
+.darkj #add-fakemon-form textarea,
+.darkj #add-fakemon-form select {
     background-color: #374151;
     border-color: #4b5563;
 }

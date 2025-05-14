@@ -15,14 +15,14 @@
 </head>
 
 <body
-    class="bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-900 dark:to-gray-800 min-h-screen transition-colors duration-300">
+    class="bg-gradient-to-br from-blue-50 to-purple-50 darkj:from-gray-900 darkj:to-gray-800 min-h-screen transition-colors duration-300">
     <!-- Header -->
-    <header class="sticky top-0 z-50 backdrop-blur-md bg-white/70 dark:bg-gray-900/70 shadow-sm">
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-white/70 darkj:bg-gray-900/70 shadow-sm">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center space-x-4">
                 <a href="index.html"
-                    class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
-                    <i class="fas fa-arrow-left text-gray-700 dark:text-gray-300"></i>
+                    class="p-2 rounded-full hover:bg-gray-200 darkj:hover:bg-gray-700 transition-colors">
+                    <i class="fas fa-arrow-left text-gray-700 darkj:text-gray-300"></i>
                 </a>
                 <div class="flex items-center space-x-2">
                     <div
@@ -30,15 +30,15 @@
                         <i class="fas fa-dragon text-white text-sm"></i>
                     </div>
                     <h1
-                        class="text-xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent dark:from-purple-400 dark:to-pink-400">
+                        class="text-xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent darkj:from-purple-400 darkj:to-pink-400">
                         FakemonDex</h1>
                 </div>
             </div>
             <div class="flex items-center space-x-4">
                 <button id="theme-toggle"
-                    class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
-                    <i class="fas fa-moon dark:hidden text-gray-700"></i>
-                    <i class="fas fa-sun hidden dark:block text-yellow-300"></i>
+                    class="p-2 rounded-full hover:bg-gray-200 darkj:hover:bg-gray-700 transition-colors">
+                    <i class="fas fa-moon darkj:hidden text-gray-700"></i>
+                    <i class="fas fa-sun hidden darkj:block text-yellow-300"></i>
                 </button>
             </div>
         </div>
@@ -46,9 +46,9 @@
 
     <!-- Main Content -->
     <main class="container mx-auto px-4 py-8 max-w-3xl">
-        <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden">
+        <div class="bg-white darkj:bg-gray-800 rounded-2xl shadow-xl overflow-hidden">
             <div class="p-6">
-                <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-6 flex items-center gap-2">
+                <h2 class="text-2xl font-bold text-gray-800 darkj:text-white mb-6 flex items-center gap-2">
                     <i class="fas fa-plus text-purple-500"></i>
                     <span data-i18n="add_modal_title">Adicionar Fakemon</span>
                 </h2>
@@ -58,15 +58,15 @@
                     <!-- Nome -->
                     <div>
                         <label for="fakemon-name"
-                            class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                            class="block text-sm font-medium text-gray-700 darkj:text-gray-300 mb-2"
                             data-i18n="add_modal_name">Nome do Fakemon</label>
                         <input type="text" id="fakemon-name" required
-                            class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-purple-500 dark:bg-gray-700 dark:text-white transition-colors">
+                            class="w-full px-4 py-3 border border-gray-300 darkj:border-gray-600 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-purple-500 darkj:bg-gray-700 darkj:text-white transition-colors">
                     </div>
 
                     <!-- Tipos -->
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                        <label class="block text-sm font-medium text-gray-700 darkj:text-gray-300 mb-2"
                             data-i18n="add_modal_types">Tipos (Selecione até 2)</label>
                         <div class="flex flex-wrap gap-2" id="type-selector">
                             <!-- JS vai preencher aqui -->
@@ -76,75 +76,75 @@
                     <!-- Descrição -->
                     <div>
                         <label for="fakemon-description"
-                            class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                            class="block text-sm font-medium text-gray-700 darkj:text-gray-300 mb-2"
                             data-i18n="add_modal_description">Descrição</label>
                         <textarea id="fakemon-description" rows="4" required
-                            class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-purple-500 dark:bg-gray-700 dark:text-white transition-colors"></textarea>
+                            class="w-full px-4 py-3 border border-gray-300 darkj:border-gray-600 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-purple-500 darkj:bg-gray-700 darkj:text-white transition-colors"></textarea>
                     </div>
 
                     <!-- Altura e Peso -->
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                         <div>
                             <label for="fakemon-height"
-                                class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                                class="block text-sm font-medium text-gray-700 darkj:text-gray-300 mb-2"
                                 data-i18n="add_modal_height">Altura (metros)</label>
                             <input type="number" step="0.1" id="fakemon-height" min="0.1" max="99.9" required
-                                class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-purple-500 dark:bg-gray-700 dark:text-white transition-colors">
+                                class="w-full px-4 py-3 border border-gray-300 darkj:border-gray-600 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-purple-500 darkj:bg-gray-700 darkj:text-white transition-colors">
                         </div>
                         <div>
                             <label for="fakemon-weight"
-                                class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                                class="block text-sm font-medium text-gray-700 darkj:text-gray-300 mb-2"
                                 data-i18n="add_modal_weight">Peso (kg)</label>
                             <input type="number" step="0.1" id="fakemon-weight" min="0.1" max="999.9" required
-                                class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-purple-500 dark:bg-gray-700 dark:text-white transition-colors">
+                                class="w-full px-4 py-3 border border-gray-300 darkj:border-gray-600 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-purple-500 darkj:bg-gray-700 darkj:text-white transition-colors">
                         </div>
                     </div>
 
                     <!-- Stats -->
                     <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                        <div class="bg-gray-100 dark:bg-gray-700 p-3 rounded-lg">
+                        <div class="bg-gray-100 darkj:bg-gray-700 p-3 rounded-lg">
                             <label for="fakemon-hp"
-                                class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                                class="block text-sm font-medium text-gray-700 darkj:text-gray-300 mb-1"
                                 data-i18n="add_modal_hp">HP</label>
                             <input type="number" id="fakemon-hp" min="1" max="255" required
-                                class="w-full px-3 py-2 bg-white dark:bg-gray-600 border border-gray-200 dark:border-gray-500 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 dark:text-white transition-colors">
+                                class="w-full px-3 py-2 bg-white darkj:bg-gray-600 border border-gray-200 darkj:border-gray-500 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 darkj:text-white transition-colors">
                         </div>
-                        <div class="bg-gray-100 dark:bg-gray-700 p-3 rounded-lg">
+                        <div class="bg-gray-100 darkj:bg-gray-700 p-3 rounded-lg">
                             <label for="fakemon-attack"
-                                class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                                class="block text-sm font-medium text-gray-700 darkj:text-gray-300 mb-1"
                                 data-i18n="add_modal_attack">Ataque</label>
                             <input type="number" id="fakemon-attack" min="1" max="255" required
-                                class="w-full px-3 py-2 bg-white dark:bg-gray-600 border border-gray-200 dark:border-gray-500 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 dark:text-white transition-colors">
+                                class="w-full px-3 py-2 bg-white darkj:bg-gray-600 border border-gray-200 darkj:border-gray-500 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 darkj:text-white transition-colors">
                         </div>
-                        <div class="bg-gray-100 dark:bg-gray-700 p-3 rounded-lg">
+                        <div class="bg-gray-100 darkj:bg-gray-700 p-3 rounded-lg">
                             <label for="fakemon-defense"
-                                class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                                class="block text-sm font-medium text-gray-700 darkj:text-gray-300 mb-1"
                                 data-i18n="add_modal_defense">Defesa</label>
                             <input type="number" id="fakemon-defense" min="1" max="255" required
-                                class="w-full px-3 py-2 bg-white dark:bg-gray-600 border border-gray-200 dark:border-gray-500 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 dark:text-white transition-colors">
+                                class="w-full px-3 py-2 bg-white darkj:bg-gray-600 border border-gray-200 darkj:border-gray-500 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 darkj:text-white transition-colors">
                         </div>
-                        <div class="bg-gray-100 dark:bg-gray-700 p-3 rounded-lg">
+                        <div class="bg-gray-100 darkj:bg-gray-700 p-3 rounded-lg">
                             <label for="fakemon-speed"
-                                class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                                class="block text-sm font-medium text-gray-700 darkj:text-gray-300 mb-1"
                                 data-i18n="add_modal_speed">Velocidade</label>
                             <input type="number" id="fakemon-speed" min="1" max="255" required
-                                class="w-full px-3 py-2 bg-white dark:bg-gray-600 border border-gray-200 dark:border-gray-500 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 dark:text-white transition-colors">
+                                class="w-full px-3 py-2 bg-white darkj:bg-gray-600 border border-gray-200 darkj:border-gray-500 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 darkj:text-white transition-colors">
                         </div>
                     </div>
 
                     <!-- Imagem -->
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                        <label class="block text-sm font-medium text-gray-700 darkj:text-gray-300 mb-2"
                             data-i18n="add_modal_image">Imagem</label>
                         <div class="flex items-center justify-center w-full">
                             <label for="fakemon-image"
-                                class="flex flex-col items-center justify-center w-full h-48 border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-xl cursor-pointer bg-gray-50 dark:bg-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors">
+                                class="flex flex-col items-center justify-center w-full h-48 border-2 border-dashed border-gray-300 darkj:border-gray-600 rounded-xl cursor-pointer bg-gray-50 darkj:bg-gray-700 hover:bg-gray-100 darkj:hover:bg-gray-600 transition-colors">
                                 <div class="flex flex-col items-center justify-center pt-5 pb-6">
                                     <i
-                                        class="fas fa-cloud-upload-alt text-4xl text-gray-400 dark:text-gray-300 mb-3"></i>
-                                    <p class="mb-2 text-sm text-gray-500 dark:text-gray-400"
+                                        class="fas fa-cloud-upload-alt text-4xl text-gray-400 darkj:text-gray-300 mb-3"></i>
+                                    <p class="mb-2 text-sm text-gray-500 darkj:text-gray-400"
                                         data-i18n="add_modal_upload_text">Clique para enviar ou arraste uma imagem</p>
-                                    <p class="text-xs text-gray-500 dark:text-gray-400">PNG, JPG (Máx. 5MB)</p>
+                                    <p class="text-xs text-gray-500 darkj:text-gray-400">PNG, JPG (Máx. 5MB)</p>
                                 </div>
                                 <input id="fakemon-image" type="file" accept="image/*" class="hidden" required>
                             </label>
@@ -165,8 +165,8 @@
     </main>
 
     <!-- Footer Simplificado -->
-    <footer class="bg-gray-100 dark:bg-gray-900/70 border-t border-gray-200 dark:border-gray-800 mt-12">
-        <div class="container mx-auto px-4 py-6 text-center text-gray-600 dark:text-gray-400 text-sm">
+    <footer class="bg-gray-100 darkj:bg-gray-900/70 border-t border-gray-200 darkj:border-gray-800 mt-12">
+        <div class="container mx-auto px-4 py-6 text-center text-gray-600 darkj:text-gray-400 text-sm">
             © 2023 FakemonDex - <span data-i18n="footer_copyright">Todos os direitos reservados</span>
         </div>
     </footer>
@@ -190,7 +190,7 @@
                 rock: "bg-yellow-600 text-white",
                 ghost: "bg-indigo-700 text-white",
                 dragon: "bg-gradient-to-r from-indigo-600 to-red-600 text-white",
-                dark: "bg-gray-800 text-white",
+                darkj: "bg-gray-800 text-white",
                 steel: "bg-gray-400 text-gray-800",
                 fairy: "bg-pink-300 text-gray-800"
             };

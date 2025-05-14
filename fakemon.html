@@ -51,14 +51,14 @@
 </head>
 
 <body
-    class="bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-900 dark:to-gray-800 min-h-screen transition-colors duration-300">
+    class="bg-gradient-to-br from-blue-50 to-purple-50 darkj:from-gray-900 darkj:to-gray-800 min-h-screen transition-colors duration-300">
     <!-- Header -->
-    <header class="sticky top-0 z-50 backdrop-blur-md bg-white/70 dark:bg-gray-900/70 shadow-sm">
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-white/70 darkj:bg-gray-900/70 shadow-sm">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center space-x-4">
                 <a href="listagem.html"
-                    class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
-                    <i class="fas fa-arrow-left text-gray-700 dark:text-gray-300"></i>
+                    class="p-2 rounded-full hover:bg-gray-200 darkj:hover:bg-gray-700 transition-colors">
+                    <i class="fas fa-arrow-left text-gray-700 darkj:text-gray-300"></i>
                 </a>
                 <div class="flex items-center space-x-2">
                     <div
@@ -66,15 +66,15 @@
                         <i class="fas fa-dragon text-white text-sm"></i>
                     </div>
                     <h1
-                        class="text-xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent dark:from-purple-400 dark:to-pink-400">
+                        class="text-xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent darkj:from-purple-400 darkj:to-pink-400">
                         FakemonDex</h1>
                 </div>
             </div>
             <div class="flex items-center space-x-4">
                 <button id="theme-toggle"
-                    class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
-                    <i class="fas fa-moon dark:hidden text-gray-700"></i>
-                    <i class="fas fa-sun hidden dark:block text-yellow-300"></i>
+                    class="p-2 rounded-full hover:bg-gray-200 darkj:hover:bg-gray-700 transition-colors">
+                    <i class="fas fa-moon darkj:hidden text-gray-700"></i>
+                    <i class="fas fa-sun hidden darkj:block text-yellow-300"></i>
                 </button>
             </div>
         </div>
@@ -85,13 +85,13 @@
         <!-- Navegação Pokédex -->
         <div class="flex justify-between items-center mb-8">
             <a href="#"
-                class="px-4 py-2 bg-white dark:bg-gray-800 rounded-full shadow-md hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors flex items-center gap-2">
+                class="px-4 py-2 bg-white darkj:bg-gray-800 rounded-full shadow-md hover:bg-gray-100 darkj:hover:bg-gray-700 transition-colors flex items-center gap-2">
                 <i class="fas fa-chevron-left text-purple-500"></i>
                 <span class="font-medium">#024</span>
             </a>
-            <span class="text-lg font-bold text-gray-700 dark:text-gray-300">#025</span>
+            <span class="text-lg font-bold text-gray-700 darkj:text-gray-300">#025</span>
             <a href="#"
-                class="px-4 py-2 bg-white dark:bg-gray-800 rounded-full shadow-md hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors flex items-center gap-2">
+                class="px-4 py-2 bg-white darkj:bg-gray-800 rounded-full shadow-md hover:bg-gray-100 darkj:hover:bg-gray-700 transition-colors flex items-center gap-2">
                 <span class="font-medium">#026</span>
                 <i class="fas fa-chevron-right text-purple-500"></i>
             </a>
@@ -130,11 +130,11 @@
 
 
         <!-- Card do Fakemon -->
-        <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden mb-8">
+        <div class="bg-white darkj:bg-gray-800 rounded-2xl shadow-xl overflow-hidden mb-8">
             <!-- Cabeçalho com número e nome -->
-            <div class="bg-gradient-to-r from-purple-100 to-pink-100 dark:from-purple-900/30 dark:to-pink-900/30 p-6">
+            <div class="bg-gradient-to-r from-purple-100 to-pink-100 darkj:from-purple-900/30 darkj:to-pink-900/30 p-6">
                 <div class="flex justify-between items-center">
-                    <span class="text-lg font-bold text-gray-600 dark:text-gray-300">#025</span>
+                    <span class="text-lg font-bold text-gray-600 darkj:text-gray-300">#025</span>
                     <div class="flex gap-2">
                         <span
                             class="type-badge px-3 py-1 rounded-full bg-red-500 text-white text-sm font-medium">Fogo</span>
@@ -142,11 +142,11 @@
                             class="type-badge px-3 py-1 rounded-full bg-gradient-to-r from-indigo-600 to-red-600 text-white text-sm font-medium">Dragão</span>
                     </div>
                 </div>
-                <h2 class="text-3xl font-bold text-gray-800 dark:text-white mt-2">Pyroclaw</h2>
+                <h2 class="text-3xl font-bold text-gray-800 darkj:text-white mt-2">Pyroclaw</h2>
             </div>
 
             <!-- Imagem principal -->
-            <div class="mb-6 bg-gray-100 dark:bg-gray-700 rounded-xl overflow-hidden relative">
+            <div class="mb-6 bg-gray-100 darkj:bg-gray-700 rounded-xl overflow-hidden relative">
                 <!-- Carrossel Principal -->
                 <div class="carrossel-container flex overflow-x-auto snap-mandatory snap-x hide-scrollbar"
                     id="main-carrossel">
@@ -165,7 +165,7 @@
                 </div>
 
                 <!-- Miniaturas -->
-                <div class="flex justify-center gap-3 p-4 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm">
+                <div class="flex justify-center gap-3 p-4 bg-white/80 darkj:bg-gray-800/80 backdrop-blur-sm">
                     <button class="thumbnail active" data-index="0">
                         <img src="https://via.placeholder.com/80x50/FF6B6B/FFFFFF?text=Front"
                             class="w-16 h-10 object-cover rounded-md">
@@ -182,12 +182,12 @@
 
                 <!-- Controles -->
                 <button
-                    class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 dark:bg-gray-800/80 p-2 rounded-full shadow-md hover:bg-purple-500 hover:text-white transition-colors"
+                    class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 darkj:bg-gray-800/80 p-2 rounded-full shadow-md hover:bg-purple-500 hover:text-white transition-colors"
                     id="prev-image">
                     <i class="fas fa-chevron-left"></i>
                 </button>
                 <button
-                    class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 dark:bg-gray-800/80 p-2 rounded-full shadow-md hover:bg-purple-500 hover:text-white transition-colors"
+                    class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 darkj:bg-gray-800/80 p-2 rounded-full shadow-md hover:bg-purple-500 hover:text-white transition-colors"
                     id="next-image">
                     <i class="fas fa-chevron-right"></i>
                 </button>
@@ -195,7 +195,7 @@
 
             <!-- Galeria Adicional -->
             <div class="mb-8">
-                <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-4 flex items-center gap-2">
+                <h3 class="text-xl font-bold text-gray-800 darkj:text-white mb-4 flex items-center gap-2">
                     <i class="fas fa-images text-purple-500"></i>
                     <span>Galeria</span>
                 </h3>
@@ -227,53 +227,53 @@
             <div class="p-6 grid grid-cols-1 md:grid-cols-2 gap-8">
                 <!-- Coluna 1: Descrição e Stats -->
                 <div>
-                    <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-4 flex items-center gap-2">
+                    <h3 class="text-xl font-bold text-gray-800 darkj:text-white mb-4 flex items-center gap-2">
                         <i class="fas fa-scroll text-purple-500"></i>
                         <span>Descrição</span>
                     </h3>
-                    <p class="text-gray-600 dark:text-gray-300 mb-6">
+                    <p class="text-gray-600 darkj:text-gray-300 mb-6">
                         Um dragão flamejante que habita vulcões ativos. Suas escamas brilham como lava e podem atingir
                         temperaturas de 1.000°C. Dizem que sua chama nunca se apaga.
                     </p>
 
-                    <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-4 flex items-center gap-2">
+                    <h3 class="text-xl font-bold text-gray-800 darkj:text-white mb-4 flex items-center gap-2">
                         <i class="fas fa-chart-bar text-purple-500"></i>
                         <span>Estatísticas</span>
                     </h3>
                     <div class="space-y-3">
                         <div>
                             <div class="flex justify-between mb-1">
-                                <span class="text-sm font-medium text-gray-700 dark:text-gray-300">HP</span>
-                                <span class="text-sm text-gray-600 dark:text-gray-400">95</span>
+                                <span class="text-sm font-medium text-gray-700 darkj:text-gray-300">HP</span>
+                                <span class="text-sm text-gray-600 darkj:text-gray-400">95</span>
                             </div>
-                            <div class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2">
+                            <div class="w-full bg-gray-200 darkj:bg-gray-600 rounded-full h-2">
                                 <div class="stat-bar bg-green-500 h-2 rounded-full" style="width: 37%"></div>
                             </div>
                         </div>
                         <div>
                             <div class="flex justify-between mb-1">
-                                <span class="text-sm font-medium text-gray-700 dark:text-gray-300">Ataque</span>
-                                <span class="text-sm text-gray-600 dark:text-gray-400">120</span>
+                                <span class="text-sm font-medium text-gray-700 darkj:text-gray-300">Ataque</span>
+                                <span class="text-sm text-gray-600 darkj:text-gray-400">120</span>
                             </div>
-                            <div class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2">
+                            <div class="w-full bg-gray-200 darkj:bg-gray-600 rounded-full h-2">
                                 <div class="stat-bar bg-red-500 h-2 rounded-full" style="width: 47%"></div>
                             </div>
                         </div>
                         <div>
                             <div class="flex justify-between mb-1">
-                                <span class="text-sm font-medium text-gray-700 dark:text-gray-300">Defesa</span>
-                                <span class="text-sm text-gray-600 dark:text-gray-400">85</span>
+                                <span class="text-sm font-medium text-gray-700 darkj:text-gray-300">Defesa</span>
+                                <span class="text-sm text-gray-600 darkj:text-gray-400">85</span>
                             </div>
-                            <div class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2">
+                            <div class="w-full bg-gray-200 darkj:bg-gray-600 rounded-full h-2">
                                 <div class="stat-bar bg-blue-500 h-2 rounded-full" style="width: 33%"></div>
                             </div>
                         </div>
                         <div>
                             <div class="flex justify-between mb-1">
-                                <span class="text-sm font-medium text-gray-700 dark:text-gray-300">Velocidade</span>
-                                <span class="text-sm text-gray-600 dark:text-gray-400">80</span>
+                                <span class="text-sm font-medium text-gray-700 darkj:text-gray-300">Velocidade</span>
+                                <span class="text-sm text-gray-600 darkj:text-gray-400">80</span>
                             </div>
-                            <div class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2">
+                            <div class="w-full bg-gray-200 darkj:bg-gray-600 rounded-full h-2">
                                 <div class="stat-bar bg-yellow-500 h-2 rounded-full" style="width: 31%"></div>
                             </div>
                         </div>
@@ -282,32 +282,32 @@
 
                 <!-- Coluna 2: Detalhes físicos e Artista -->
                 <div>
-                    <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-4 flex items-center gap-2">
+                    <h3 class="text-xl font-bold text-gray-800 darkj:text-white mb-4 flex items-center gap-2">
                         <i class="fas fa-ruler-combined text-purple-500"></i>
                         <span>Detalhes</span>
                     </h3>
                     <div class="grid grid-cols-2 gap-4 mb-6">
-                        <div class="bg-gray-100 dark:bg-gray-700 p-3 rounded-lg">
-                            <p class="text-sm text-gray-500 dark:text-gray-400">Altura</p>
-                            <p class="font-semibold text-gray-800 dark:text-white">2.3m</p>
+                        <div class="bg-gray-100 darkj:bg-gray-700 p-3 rounded-lg">
+                            <p class="text-sm text-gray-500 darkj:text-gray-400">Altura</p>
+                            <p class="font-semibold text-gray-800 darkj:text-white">2.3m</p>
                         </div>
-                        <div class="bg-gray-100 dark:bg-gray-700 p-3 rounded-lg">
-                            <p class="text-sm text-gray-500 dark:text-gray-400">Peso</p>
-                            <p class="font-semibold text-gray-800 dark:text-white">185.5kg</p>
+                        <div class="bg-gray-100 darkj:bg-gray-700 p-3 rounded-lg">
+                            <p class="text-sm text-gray-500 darkj:text-gray-400">Peso</p>
+                            <p class="font-semibold text-gray-800 darkj:text-white">185.5kg</p>
                         </div>
-                        <div class="bg-gray-100 dark:bg-gray-700 p-3 rounded-lg">
-                            <p class="text-sm text-gray-500 dark:text-gray-400">Categoria</p>
-                            <p class="font-semibold text-gray-800 dark:text-white">Dragão Flamejante</p>
+                        <div class="bg-gray-100 darkj:bg-gray-700 p-3 rounded-lg">
+                            <p class="text-sm text-gray-500 darkj:text-gray-400">Categoria</p>
+                            <p class="font-semibold text-gray-800 darkj:text-white">Dragão Flamejante</p>
                         </div>
-                        <div class="bg-gray-100 dark:bg-gray-700 p-3 rounded-lg">
-                            <p class="text-sm text-gray-500 dark:text-gray-400">Gênero</p>
-                            <p class="font-semibold text-gray-800 dark:text-white">♂/♀</p>
+                        <div class="bg-gray-100 darkj:bg-gray-700 p-3 rounded-lg">
+                            <p class="text-sm text-gray-500 darkj:text-gray-400">Gênero</p>
+                            <p class="font-semibold text-gray-800 darkj:text-white">♂/♀</p>
                         </div>
                     </div>
 
                     <!-- Seção do Artista -->
-                    <div class="bg-gray-100 dark:bg-gray-700 rounded-lg p-4">
-                        <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3 flex items-center gap-2">
+                    <div class="bg-gray-100 darkj:bg-gray-700 rounded-lg p-4">
+                        <h3 class="text-xl font-bold text-gray-800 darkj:text-white mb-3 flex items-center gap-2">
                             <i class="fas fa-paint-brush text-purple-500"></i>
                             <span>Artista</span>
                         </h3>
@@ -317,11 +317,11 @@
                                 <i class="fas fa-user"></i>
                             </div>
                             <div>
-                                <h4 class="font-bold text-gray-800 dark:text-white">LunaSkies</h4>
-                                <p class="text-sm text-gray-600 dark:text-gray-300">15 Fakemons criados</p>
+                                <h4 class="font-bold text-gray-800 darkj:text-white">LunaSkies</h4>
+                                <p class="text-sm text-gray-600 darkj:text-gray-300">15 Fakemons criados</p>
                             </div>
                         </div>
-                        <p class="text-gray-600 dark:text-gray-300 mb-4 text-sm">
+                        <p class="text-gray-600 darkj:text-gray-300 mb-4 text-sm">
                             Artista especializada em criaturas mitológicas. Seus trabalhos já foram expostos em galerias
                             internacionais.
                         </p>
@@ -337,17 +337,17 @@
         <!-- Navegação Inferior -->
         <div class="flex justify-between items-center mt-8">
             <a href="#"
-                class="px-6 py-3 bg-white dark:bg-gray-800 rounded-xl shadow-md hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors flex items-center gap-2">
+                class="px-6 py-3 bg-white darkj:bg-gray-800 rounded-xl shadow-md hover:bg-gray-100 darkj:hover:bg-gray-700 transition-colors flex items-center gap-2">
                 <i class="fas fa-chevron-left text-purple-500"></i>
                 <span class="font-medium">Voltar para a lista</span>
             </a>
             <div class="flex items-center gap-4">
                 <a href="#"
-                    class="p-3 bg-white dark:bg-gray-800 rounded-full shadow-md hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+                    class="p-3 bg-white darkj:bg-gray-800 rounded-full shadow-md hover:bg-gray-100 darkj:hover:bg-gray-700 transition-colors">
                     <i class="fas fa-share-alt text-purple-500"></i>
                 </a>
                 <a href="#"
-                    class="p-3 bg-white dark:bg-gray-800 rounded-full shadow-md hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+                    class="p-3 bg-white darkj:bg-gray-800 rounded-full shadow-md hover:bg-gray-100 darkj:hover:bg-gray-700 transition-colors">
                     <i class="fas fa-heart text-red-500"></i>
                 </a>
             </div>
@@ -355,8 +355,8 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-100 dark:bg-gray-900/70 border-t border-gray-200 dark:border-gray-800 mt-12">
-        <div class="container mx-auto px-4 py-8 text-center text-gray-600 dark:text-gray-400 text-sm">
+    <footer class="bg-gray-100 darkj:bg-gray-900/70 border-t border-gray-200 darkj:border-gray-800 mt-12">
+        <div class="container mx-auto px-4 py-8 text-center text-gray-600 darkj:text-gray-400 text-sm">
             © 2023 FakemonDex - Todos os direitos reservados
         </div>
     </footer>
