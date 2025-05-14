@@ -108,11 +108,11 @@ function renderFeaturedFakemons() {
 
     fakemons.forEach(fakemon => {
         const fakemonCard = document.createElement('div');
-        fakemonCard.className = 'bg-white darkj:bg-gray-800 rounded-xl shadow-md hover:shadow-lg transition-shadow overflow-hidden cursor-pointer';
+        fakemonCard.className = 'bg-white darkj:bg-gray-800 rounded-xl shadow-md transition-all hover:bg-violet-100 transform hover:scale-105 hover:shadow-xl hover:brightness-15 overflow-hidden cursor-pointer hover:border-4 border-purple-500';
         fakemonCard.addEventListener('click', () => openFakemonModal(fakemon));
 
         fakemonCard.innerHTML = `
-            <div class="bg-gray-100 darkj:bg-gray-700 flex items-center justify-center p-4">
+            <div class="bg-gray-100 hover:bg-gray-100 darkj:bg-gray-700 flex items-center justify-center p-4">
                 <img src="${fakemon.image}" alt="${fakemon.name}" class="h-full object-contain rounded-lg">
             </div>
             <div class="p-4">

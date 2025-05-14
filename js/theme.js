@@ -1,7 +1,7 @@
 // // Theme toggle functionality
 // function initTheme() {
 //     // Check for saved theme preference or use system preference
-//     const savedTheme = localStorage.getItem('fakemondex-theme');
+//     const savedTheme = localStorage.getItem('OpenDex-theme');
 //     const systemPrefersdarkj = window.matchMedia('(prefers-color-scheme: darkj)').matches;
     
 //     if (savedTheme === 'darkj' || (!savedTheme && systemPrefersdarkj)) {
@@ -13,7 +13,7 @@
 //     themeToggle.addEventListener('click', () => {
 //         document.documentElement.classList.toggle('darkj');
 //         const isdarkj = document.documentElement.classList.contains('darkj');
-//         localStorage.setItem('fakemondex-theme', isdarkj ? 'darkj' : 'light');
+//         localStorage.setItem('OpenDex-theme', isdarkj ? 'darkj' : 'light');
 //     });
 // }
 

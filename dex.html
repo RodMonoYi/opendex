@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FakemonDex | Catálogo</title>
+    <title>OpenDex | Catálogo</title>
     <meta name="description" content="Explore Fakemons criados por artistas de todo o mundo">
     <link href="./css/styles.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -19,14 +19,14 @@
     <!-- Header -->
     <header class="sticky top-0 z-50 backdrop-blur-md bg-white/70 darkj:bg-gray-900/70 shadow-sm">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <div class="flex items-center space-x-2" onclick="window.location.href='index.html'">
+            <div class="flex items-center space-x-2 hover:cursor-pointer" onclick="window.location.href='index.html'">
                 <div
                     class="w-10 h-10 bg-gradient-to-r from-yellow-400 to-red-500 rounded-full flex items-center justify-center">
                     <i class="fas fa-dragon text-white text-xl"></i>
                 </div>
                 <h1
                     class="text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent darkj:from-purple-400 darkj:to-pink-400">
-                    FakemonDex</h1>
+                    OpenDex</h1>
             </div>
             <div class="flex items-center space-x-4">
                 <button id="theme-toggle"
@@ -137,73 +137,177 @@
     <footer class="bg-gray-100 darkj:bg-gray-900/70 border-t border-gray-200 darkj:border-gray-800 mt-12">
         <div class="container mx-auto px-4 py-8">
             <div class="text-center text-gray-600 darkj:text-gray-400 text-sm">
-                © 2025 FakemonDex - <span data-i18n="footer_copyright">Todos os direitos reservados</span>
+                © 2025 OpenDex - <span data-i18n="footer_copyright">Todos os direitos reservados</span>
             </div>
         </div>
     </footer>
 
-    <!-- Modal de Detalhes (mesmo do index.html original) -->
-    <div id="fakemon-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 hidden">
-        <!-- Conteúdo do modal aqui -->
+
+        <!-- Fakemon Modal (hidden by default) -->
+    <div id="fakemon-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 hidden px-4">
+        <div class="bg-white darkj:bg-gray-800 rounded-2xl shadow-2xl w-full max-w-4xl mx-4 max-h-[90vh] overflow-y-auto">
+            <div class="p-6">
+                <div class="flex justify-between items-start mb-6">
+                    <div>
+                        <h3 id="modal-fakemon-name" class="text-2xl font-bold text-gray-800 darkj:text-white">Fakemon Name</h3>
+                        <div id="modal-fakemon-types" class="flex space-x-2 mt-2">
+                            <!-- Types will be added here -->
+                        </div>
+                    </div>
+                    <button id="close-modal" class="p-2 rounded-full hover:bg-gray-200 darkj:hover:bg-gray-700">
+                        <i class="fas fa-times text-gray-500 darkj:text-gray-400"></i>
+                    </button>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <div class="bg-gray-100 darkj:bg-gray-700 rounded-xl p-4 mb-4">
+                            <img id="modal-fakemon-image" src="" alt="Fakemon" class="w-full object-contain rounded-lg">
+                        </div>
+                        <div class="grid grid-cols-2 gap-4 mb-6">
+                            <div class="bg-gray-100 darkj:bg-gray-700 p-3 rounded-lg">
+                                <p class="text-sm text-gray-500 darkj:text-gray-400" data-i18n="modal_height">Altura</p>
+                                <p id="modal-fakemon-height" class="font-semibold text-gray-800 darkj:text-white">1.2m</p>
+                            </div>
+                            <div class="bg-gray-100 darkj:bg-gray-700 p-3 rounded-lg">
+                                <p class="text-sm text-gray-500 darkj:text-gray-400" data-i18n="modal_weight">Peso</p>
+                                <p id="modal-fakemon-weight" class="font-semibold text-gray-800 darkj:text-white">25.4kg</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <div class="mb-6">
+                            <h4 class="font-semibold text-lg mb-2 text-gray-800 darkj:text-white" data-i18n="modal_description">Descrição</h4>
+                            <p id="modal-fakemon-description" class="text-gray-600 darkj:text-gray-300">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-semibold text-lg mb-2 text-gray-800 darkj:text-white" data-i18n="modal_artist">Artista</h4>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center text-white">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div>
+                                    <p id="modal-fakemon-artist" class="font-medium text-gray-800 darkj:text-white">Artist Name</p>
+                                    <div id="modal-fakemon-social" class="flex space-x-2 mt-1">
+                                        <!-- Social links will be added here -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-gray-100 darkj:bg-gray-700 p-4 rounded-lg">
+                            <h4 class="font-semibold text-lg mb-2 text-gray-800 darkj:text-white" data-i18n="modal_stats">Estatísticas</h4>
+                            <div class="space-y-3">
+                                <div>
+                                    <div class="flex justify-between mb-1">
+                                        <span class="text-sm font-medium text-gray-800 darkj:text-white" data-i18n="modal_hp">HP</span>
+                                        <span id="modal-fakemon-hp" class="text-sm text-gray-600 darkj:text-gray-300">80</span>
+                                    </div>
+                                    <div class="w-full bg-gray-200 darkj:bg-gray-600 rounded-full h-2">
+                                        <div id="modal-fakemon-hp-bar" class="bg-green-500 h-2 rounded-full" style="width: 80%"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between mb-1">
+                                        <span class="text-sm font-medium text-gray-800 darkj:text-white" data-i18n="modal_attack">Ataque</span>
+                                        <span id="modal-fakemon-attack" class="text-sm text-gray-600 darkj:text-gray-300">95</span>
+                                    </div>
+                                    <div class="w-full bg-gray-200 darkj:bg-gray-600 rounded-full h-2">
+                                        <div id="modal-fakemon-attack-bar" class="bg-red-500 h-2 rounded-full" style="width: 95%"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between mb-1">
+                                        <span class="text-sm font-medium text-gray-800 darkj:text-white" data-i18n="modal_defense">Defesa</span>
+                                        <span id="modal-fakemon-defense" class="text-sm text-gray-600 darkj:text-gray-300">75</span>
+                                    </div>
+                                    <div class="w-full bg-gray-200 darkj:bg-gray-600 rounded-full h-2">
+                                        <div id="modal-fakemon-defense-bar" class="bg-blue-500 h-2 rounded-full" style="width: 75%"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between mb-1">
+                                        <span class="text-sm font-medium text-gray-800 darkj:text-white" data-i18n="modal_speed">Velocidade</span>
+                                        <span id="modal-fakemon-speed" class="text-sm text-gray-600 darkj:text-gray-300">110</span>
+                                    </div>
+                                    <div class="w-full bg-gray-200 darkj:bg-gray-600 rounded-full h-2">
+                                        <div id="modal-fakemon-speed-bar" class="bg-yellow-500 h-2 rounded-full" style="width: 110%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Script de Listagem -->
-    <script>
-        const typeColors = {
-            fire: "bg-red-500 text-white",
-            water: "bg-blue-500 text-white",
-            grass: "bg-green-500 text-white",
-            electric: "bg-yellow-400 text-gray-800",
-            ice: "bg-cyan-300 text-gray-800",
-            fighting: "bg-red-700 text-white",
-            poison: "bg-purple-600 text-white",
-            ground: "bg-yellow-700 text-white",
-            flying: "bg-indigo-300 text-gray-800",
-            psychic: "bg-pink-500 text-white",
-            bug: "bg-lime-500 text-gray-800",
-            rock: "bg-yellow-600 text-white",
-            ghost: "bg-indigo-700 text-white",
-            dragon: "bg-gradient-to-r from-indigo-600 to-red-600 text-white",
-            darkj: "bg-gray-800 text-white",
-            steel: "bg-gray-400 text-gray-800",
-            fairy: "bg-pink-300 text-gray-800"
-        };
+<script>
+    const typeColors = {
+        fire: "bg-red-500 text-white",
+        water: "bg-blue-500 text-white",
+        grass: "bg-green-500 text-white",
+        electric: "bg-yellow-400 text-gray-800",
+        ice: "bg-cyan-300 text-gray-800",
+        fighting: "bg-red-700 text-white",
+        poison: "bg-purple-600 text-white",
+        ground: "bg-yellow-700 text-white",
+        flying: "bg-indigo-300 text-gray-800",
+        psychic: "bg-pink-500 text-white",
+        bug: "bg-lime-500 text-gray-800",
+        rock: "bg-yellow-600 text-white",
+        ghost: "bg-indigo-700 text-white",
+        dragon: "bg-gradient-to-r from-indigo-600 to-red-600 text-white",
+        darkj: "bg-gray-800 text-white",
+        steel: "bg-gray-400 text-gray-800",
+        fairy: "bg-pink-300 text-gray-800"
+    };
 
-        const container = document.getElementById('all-fakemons');
-        const paginationContainer = document.querySelector('nav');
-        const searchInput = document.getElementById('search-fakemon');
-        const typeFilters = document.getElementById('type-filters');
+    const socialIcons = {
+        twitter: "fab fa-twitter",
+        instagram: "fab fa-instagram",
+        deviantart: "fab fa-deviantart",
+        artstation: "fab fa-artstation"
+    };
 
-        let currentPage = 1;
-        const itemsPerPage = 10;
-        let allFakemons = [];
-        let filteredFakemons = [];
-        let selectedTypes = new Set();
-        let searchTerm = '';
+    const container = document.getElementById('all-fakemons');
+    const paginationContainer = document.querySelector('nav');
+    const searchInput = document.getElementById('search-fakemon');
+    const typeFilters = document.getElementById('type-filters');
 
-        async function fetchFakemons() {
-            try {
-                const response = await fetch('./js/fakemons.json');
-                const data = await response.json();
-                allFakemons = data;
-                filteredFakemons = [...allFakemons];
-                setupTypeFilters();
-                applyFilters();
-            } catch (error) {
-                console.error("Erro ao carregar os fakemons:", error);
-            }
+    let currentPage = 1;
+    const itemsPerPage = 10;
+    let allFakemons = [];
+    let filteredFakemons = [];
+    let selectedTypes = new Set();
+    let searchTerm = '';
+
+    async function fetchFakemons() {
+        try {
+            const response = await fetch('./js/fakemons.json');
+            const data = await response.json();
+            allFakemons = data;
+            filteredFakemons = [...allFakemons];
+            setupTypeFilters();
+            applyFilters();
+        } catch (error) {
+            console.error("Erro ao carregar os fakemons:", error);
         }
+    }
 
-        function renderPage(page) {
-            container.innerHTML = '';
-            const start = (page - 1) * itemsPerPage;
-            const end = start + itemsPerPage;
-            const pageFakemons = filteredFakemons.slice(start, end);
+    function renderPage(page) {
+        container.innerHTML = '';
+        const start = (page - 1) * itemsPerPage;
+        const end = start + itemsPerPage;
+        const pageFakemons = filteredFakemons.slice(start, end);
 
-            pageFakemons.forEach(fakemon => {
-                const card = document.createElement('div');
-                card.className = 'bg-white darkj:bg-gray-800 rounded-xl shadow-md hover:shadow-lg transition-shadow overflow-hidden cursor-pointer';
-                card.innerHTML = `
+        pageFakemons.forEach(fakemon => {
+            const card = document.createElement('div');
+            card.className = 'bg-white darkj:bg-gray-800 rounded-xl shadow-md transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:brightness-15 overflow-hidden cursor-pointer';
+            card.innerHTML = `
                 <div class="relative">
                     <div class="bg-gray-100 darkj:bg-gray-700 flex items-center justify-center p-4">
                         <img src="${fakemon.image}" alt="${fakemon.name}" class="h-full object-contain rounded-lg">
@@ -224,81 +328,145 @@
                     </div>
                 </div>
             `;
-                container.appendChild(card);
-            });
-        }
+            card.addEventListener('click', () => openFakemonModal(fakemon));
+            container.appendChild(card);
+        });
+    }
 
-        function renderPagination() {
-            const totalPages = Math.ceil(filteredFakemons.length / itemsPerPage);
-            paginationContainer.innerHTML = '';
+    function renderPagination() {
+        const totalPages = Math.ceil(filteredFakemons.length / itemsPerPage);
+        paginationContainer.innerHTML = '';
 
-            const createBtn = (text, page, isActive = false, isDisabled = false) => {
-                const btn = document.createElement('button');
-                btn.textContent = text;
-                btn.className = `w-10 h-10 rounded-full flex items-center justify-center ${isActive ? 'bg-purple-500 text-white' : 'bg-gray-100 darkj:bg-gray-700 text-gray-700 darkj:text-gray-300 hover:bg-purple-500 hover:text-white'} transition-colors`;
-                if (isDisabled) {
-                    btn.disabled = true;
-                    btn.classList.add('opacity-50', 'cursor-not-allowed');
-                } else {
-                    btn.addEventListener('click', () => {
-                        currentPage = page;
-                        renderPage(currentPage);
-                        renderPagination();
-                    });
-                }
-                return btn;
-            };
-
-            paginationContainer.appendChild(createBtn('‹', currentPage - 1, false, currentPage === 1));
-
-            for (let i = 1; i <= totalPages; i++) {
-                paginationContainer.appendChild(createBtn(i, i, currentPage === i));
-            }
-
-            paginationContainer.appendChild(createBtn('›', currentPage + 1, false, currentPage === totalPages));
-        }
-
-        function setupTypeFilters() {
-            typeFilters.innerHTML = '';
-            Object.keys(typeColors).forEach(type => {
-                const button = document.createElement('button');
-                button.type = 'button';
-                button.className = `text-xs px-3 py-1 rounded-full ${typeColors[type]} opacity-70 hover:opacity-100 transition-opacity`;
-                button.textContent = type;
-                button.addEventListener('click', () => {
-                    if (selectedTypes.has(type)) {
-                        selectedTypes.delete(type);
-                        button.classList.remove('ring-2', 'ring-purple-500');
-                        button.classList.add('opacity-70');
-                    } else {
-                        selectedTypes.add(type);
-                        button.classList.add('ring-2', 'ring-purple-500');
-                        button.classList.remove('opacity-70');
-                    }
-                    applyFilters();
+        const createBtn = (text, page, isActive = false, isDisabled = false) => {
+            const btn = document.createElement('button');
+            btn.textContent = text;
+            btn.className = `w-10 h-10 rounded-full flex items-center justify-center ${isActive ? 'bg-purple-500 text-white' : 'bg-gray-100 darkj:bg-gray-700 text-gray-700 darkj:text-gray-300 hover:bg-purple-500 hover:text-white'} transition-colors`;
+            if (isDisabled) {
+                btn.disabled = true;
+                btn.classList.add('opacity-50', 'cursor-not-allowed');
+            } else {
+                btn.addEventListener('click', () => {
+                    currentPage = page;
+                    renderPage(currentPage);
+                    renderPagination();
                 });
-                typeFilters.appendChild(button);
-            });
+            }
+            return btn;
+        };
+
+        paginationContainer.appendChild(createBtn('‹', currentPage - 1, false, currentPage === 1));
+
+        for (let i = 1; i <= totalPages; i++) {
+            paginationContainer.appendChild(createBtn(i, i, currentPage === i));
         }
 
-        function applyFilters() {
-            filteredFakemons = allFakemons.filter(fakemon => {
-                const matchesSearch = searchTerm === '' || fakemon.name.toLowerCase().includes(searchTerm);
-                const matchesType = selectedTypes.size === 0 || fakemon.types.some(t => selectedTypes.has(t));
-                return matchesSearch && matchesType;
-            });
-            currentPage = 1;
-            renderPage(currentPage);
-            renderPagination();
-        }
+        paginationContainer.appendChild(createBtn('›', currentPage + 1, false, currentPage === totalPages));
+    }
 
-        searchInput.addEventListener('input', e => {
-            searchTerm = e.target.value.toLowerCase();
-            applyFilters();
+    function setupTypeFilters() {
+        typeFilters.innerHTML = '';
+        Object.keys(typeColors).forEach(type => {
+            const button = document.createElement('button');
+            button.type = 'button';
+            button.className = `text-xs px-3 py-1 rounded-full ${typeColors[type]} opacity-70 hover:opacity-100 transition-opacity`;
+            button.textContent = type;
+            button.addEventListener('click', () => {
+                if (selectedTypes.has(type)) {
+                    selectedTypes.delete(type);
+                    button.classList.remove('ring-2', 'ring-purple-500');
+                    button.classList.add('opacity-70');
+                } else {
+                    selectedTypes.add(type);
+                    button.classList.add('ring-2', 'ring-purple-500');
+                    button.classList.remove('opacity-70');
+                }
+                applyFilters();
+            });
+            typeFilters.appendChild(button);
         });
 
-        document.addEventListener('DOMContentLoaded', fetchFakemons);
-    </script>
+        // Adiciona comportamento manual de exibição com clique
+        document.querySelectorAll('.group').forEach(group => {
+            const button = group.querySelector('button');
+            const dropdown = group.querySelector('div.absolute');
+            if (button && dropdown) {
+                let timeout;
+                button.addEventListener('click', e => {
+                    e.stopPropagation();
+                    dropdown.classList.toggle('hidden');
+                });
+                document.addEventListener('click', () => dropdown.classList.add('hidden'));
+                dropdown.addEventListener('click', e => e.stopPropagation());
+            }
+        });
+    }
+
+    function applyFilters() {
+        filteredFakemons = allFakemons.filter(fakemon => {
+            const matchesSearch = searchTerm === '' || fakemon.name.toLowerCase().includes(searchTerm);
+            const matchesType = selectedTypes.size === 0 || fakemon.types.some(t => selectedTypes.has(t));
+            return matchesSearch && matchesType;
+        });
+        currentPage = 1;
+        renderPage(currentPage);
+        renderPagination();
+    }
+
+    function openFakemonModal(fakemon) {
+        const modal = document.getElementById('fakemon-modal');
+        document.getElementById('modal-fakemon-name').textContent = fakemon.name;
+        document.getElementById('modal-fakemon-description').textContent = fakemon.description;
+        document.getElementById('modal-fakemon-image').src = fakemon.image;
+        document.getElementById('modal-fakemon-height').textContent = `${fakemon.height}m`;
+        document.getElementById('modal-fakemon-weight').textContent = `${fakemon.weight}kg`;
+        document.getElementById('modal-fakemon-artist').textContent = fakemon.artist.name;
+
+        const typesContainer = document.getElementById('modal-fakemon-types');
+        typesContainer.innerHTML = '';
+        fakemon.types.forEach(type => {
+            const typeSpan = document.createElement('span');
+            typeSpan.className = `text-xs px-3 py-1 rounded-full ${typeColors[type]}`;
+            typeSpan.textContent = document.querySelector(`[data-i18n="type_${type}"]`)?.textContent || type;
+            typesContainer.appendChild(typeSpan);
+        });
+
+        document.getElementById('modal-fakemon-hp').textContent = fakemon.stats.hp;
+        document.getElementById('modal-fakemon-attack').textContent = fakemon.stats.attack;
+        document.getElementById('modal-fakemon-defense').textContent = fakemon.stats.defense;
+        document.getElementById('modal-fakemon-speed').textContent = fakemon.stats.speed;
+
+        document.getElementById('modal-fakemon-hp-bar').style.width = `${(fakemon.stats.hp / 255) * 100}%`;
+        document.getElementById('modal-fakemon-attack-bar').style.width = `${(fakemon.stats.attack / 255) * 100}%`;
+        document.getElementById('modal-fakemon-defense-bar').style.width = `${(fakemon.stats.defense / 255) * 100}%`;
+        document.getElementById('modal-fakemon-speed-bar').style.width = `${(fakemon.stats.speed / 255) * 100}%`;
+
+        const socialContainer = document.getElementById('modal-fakemon-social');
+        socialContainer.innerHTML = '';
+        fakemon.artist.social.forEach(social => {
+            const socialLink = document.createElement('a');
+            socialLink.href = social.url;
+            socialLink.target = "_blank";
+            socialLink.className = "text-gray-600 darkj:text-gray-300 hover:text-purple-600 darkj:hover:text-purple-400";
+            socialLink.innerHTML = `<i class="${socialIcons[social.platform] || 'fas fa-link'}"></i>`;
+            socialContainer.appendChild(socialLink);
+        });
+
+        modal.classList.remove('hidden');
+    }
+
+    document.getElementById('close-modal').addEventListener('click', () => {
+        document.getElementById('fakemon-modal').classList.add('hidden');
+    });
+
+    searchInput.addEventListener('input', e => {
+        searchTerm = e.target.value.toLowerCase();
+        applyFilters();
+    });
+
+    document.addEventListener('DOMContentLoaded', fetchFakemons);
+</script>
+
+
 
 
 
