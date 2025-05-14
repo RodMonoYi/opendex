@@ -18,7 +18,7 @@ console.log('Fakemons carregados com sucesso:', fakemons);
 
 // Sample data for artists
 const artists = [
-    { name: "LunaSkies", fakemons: 12, avatar: "https://placehold.co/100/FF6B6B/FFFFFF?text=LS" },
+    { name: "Rod", fakemons: 12, avatar: "https://placehold.co/100/A855F7/FFFFFF?text=ROD" },
     { name: "MarineArt", fakemons: 8, avatar: "https://placehold.co/100/4ECDC4/FFFFFF?text=MA" },
     { name: "GeoDesigns", fakemons: 15, avatar: "https://placehold.co/100/FFE66D/000000?text=GD" },
     { name: "SkyIllustrator", fakemons: 6, avatar: "https://placehold.co/100/A5D8FF/000000?text=SI" },

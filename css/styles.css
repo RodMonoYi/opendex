@@ -87,3 +87,21 @@ body {
     background-color: #374151;
     border-color: #4b5563;
 }
+
+
+
+@media (max-width: 640px) {
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    #featured-fakemons {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+    
+    .auth-modal {
+        width: 95%;
+        margin: 0 auto;
+    }
+}
