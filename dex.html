@@ -19,7 +19,7 @@
     <!-- Header -->
     <header class="sticky top-0 z-50 backdrop-blur-md bg-white/70 darkj:bg-gray-900/70 shadow-sm">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <div class="flex items-center space-x-2">
+            <div class="flex items-center space-x-2" onclick="window.location.href='index.html'">
                 <div
                     class="w-10 h-10 bg-gradient-to-r from-yellow-400 to-red-500 rounded-full flex items-center justify-center">
                     <i class="fas fa-dragon text-white text-xl"></i>
@@ -29,11 +29,6 @@
                     FakemonDex</h1>
             </div>
             <div class="flex items-center space-x-4">
-                <a href="upload.html"
-                    class="px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full hover:from-purple-600 hover:to-pink-600 transition-all shadow-md text-sm flex items-center gap-2">
-                    <i class="fas fa-plus"></i>
-                    <span data-i18n="add_fakemon">Novo Fakemon</span>
-                </a>
                 <button id="theme-toggle"
                     class="p-2 rounded-full hover:bg-gray-200 darkj:hover:bg-gray-700 transition-colors">
                     <i class="fas fa-moon darkj:hidden text-gray-700"></i>
@@ -132,11 +127,17 @@
         </div>
     </main>
 
+    <a href="upload.html"
+        class="fixed bottom-7 right-10 px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full hover:from-purple-600 hover:to-pink-600 transition-all shadow-md text-sm flex items-center gap-2">
+        <i class="fas fa-plus"></i>
+        <span data-i18n="add_fakemon">Novo Fakemon</span>
+    </a>
+
     <!-- Footer -->
     <footer class="bg-gray-100 darkj:bg-gray-900/70 border-t border-gray-200 darkj:border-gray-800 mt-12">
         <div class="container mx-auto px-4 py-8">
             <div class="text-center text-gray-600 darkj:text-gray-400 text-sm">
-                © 2023 FakemonDex - <span data-i18n="footer_copyright">Todos os direitos reservados</span>
+                © 2025 FakemonDex - <span data-i18n="footer_copyright">Todos os direitos reservados</span>
             </div>
         </div>
     </footer>
@@ -148,144 +149,159 @@
 
     <!-- Script de Listagem -->
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // Dados de exemplo (substituir por dados reais)
-            const fakemons = [
-                {
-                    id: 1,
-                    name: "Pyroclaw",
-                    types: ["fire", "dragon"],
-                    description: "A majestic dragon with flames that can melt steel. It's said to live in active volcanoes.",
-                    height: 2.3,
-                    weight: 185.5,
-                    stats: {
-                        hp: 95,
-                        attack: 120,
-                        defense: 85,
-                        speed: 80
-                    },
-                    artist: {
-                        name: "LunaSkies",
-                        social: [
-                            { platform: "twitter", url: "https://twitter.com/lunaskies" },
-                            { platform: "instagram", url: "https://instagram.com/lunaskies" }
-                        ]
-                    },
-                    image: "https://placehold.co/400x400/FF6B6B/FFFFFF?text=Pyroclaw"
-                },
-                {
-                    id: 2,
-                    name: "Aquaflare",
-                    types: ["water", "fairy"],
-                    description: "This mystical creature dances on water surfaces, leaving glowing trails behind.",
-                    height: 1.2,
-                    weight: 32.7,
-                    stats: {
-                        hp: 80,
-                        attack: 75,
-                        defense: 90,
-                        speed: 110
-                    },
-                    artist: {
-                        name: "MarineArt",
-                        social: [
-                            { platform: "deviantart", url: "https://deviantart.com/marineart" }
-                        ]
-                    },
-                    image: "https://placehold.co/400x400/4ECDC4/FFFFFF?text=Aquaflare"
-                },
-                {
-                    id: 3,
-                    name: "Terravolt",
-                    types: ["electric", "ground"],
-                    description: "A powerful creature that generates earthquakes by stomping its electrified feet.",
-                    height: 1.8,
-                    weight: 210.0,
-                    stats: {
-                        hp: 90,
-                        attack: 110,
-                        defense: 100,
-                        speed: 60
-                    },
-                    artist: {
-                        name: "GeoDesigns",
-                        social: [
-                            { platform: "artstation", url: "https://artstation.com/geodesigns" },
-                            { platform: "twitter", url: "https://twitter.com/geodesigns" }
-                        ]
-                    },
-                    image: "https://placehold.co/400x400/FFE66D/000000?text=Terravolt"
-                },
-                {
-                    id: 4,
-                    name: "Nimbreeze",
-                    types: ["flying", "ice"],
-                    description: "A swift creature that creates snowstorms with the flap of its wings.",
-                    height: 1.5,
-                    weight: 42.3,
-                    stats: {
-                        hp: 70,
-                        attack: 85,
-                        defense: 75,
-                        speed: 130
-                    },
-                    artist: {
-                        name: "SkyIllustrator",
-                        social: [
-                            { platform: "instagram", url: "https://instagram.com/skyillustrator" }
-                        ]
-                    },
-                    image: "https://placehold.co/400x400/A5D8FF/000000?text=Nimbreeze"
-                }
-            ];
+        const typeColors = {
+            fire: "bg-red-500 text-white",
+            water: "bg-blue-500 text-white",
+            grass: "bg-green-500 text-white",
+            electric: "bg-yellow-400 text-gray-800",
+            ice: "bg-cyan-300 text-gray-800",
+            fighting: "bg-red-700 text-white",
+            poison: "bg-purple-600 text-white",
+            ground: "bg-yellow-700 text-white",
+            flying: "bg-indigo-300 text-gray-800",
+            psychic: "bg-pink-500 text-white",
+            bug: "bg-lime-500 text-gray-800",
+            rock: "bg-yellow-600 text-white",
+            ghost: "bg-indigo-700 text-white",
+            dragon: "bg-gradient-to-r from-indigo-600 to-red-600 text-white",
+            darkj: "bg-gray-800 text-white",
+            steel: "bg-gray-400 text-gray-800",
+            fairy: "bg-pink-300 text-gray-800"
+        };
 
-            // Renderiza os Fakemons
-            const container = document.getElementById('all-fakemons');
-            fakemons.forEach(fakemon => {
+        const container = document.getElementById('all-fakemons');
+        const paginationContainer = document.querySelector('nav');
+        const searchInput = document.getElementById('search-fakemon');
+        const typeFilters = document.getElementById('type-filters');
+
+        let currentPage = 1;
+        const itemsPerPage = 10;
+        let allFakemons = [];
+        let filteredFakemons = [];
+        let selectedTypes = new Set();
+        let searchTerm = '';
+
+        async function fetchFakemons() {
+            try {
+                const response = await fetch('./js/fakemons.json');
+                const data = await response.json();
+                allFakemons = data;
+                filteredFakemons = [...allFakemons];
+                setupTypeFilters();
+                applyFilters();
+            } catch (error) {
+                console.error("Erro ao carregar os fakemons:", error);
+            }
+        }
+
+        function renderPage(page) {
+            container.innerHTML = '';
+            const start = (page - 1) * itemsPerPage;
+            const end = start + itemsPerPage;
+            const pageFakemons = filteredFakemons.slice(start, end);
+
+            pageFakemons.forEach(fakemon => {
                 const card = document.createElement('div');
                 card.className = 'bg-white darkj:bg-gray-800 rounded-xl shadow-md hover:shadow-lg transition-shadow overflow-hidden cursor-pointer';
                 card.innerHTML = `
-                    <div class="relative">
-                        <div class="h-48 bg-gray-100 darkj:bg-gray-700 flex items-center justify-center p-4">
-                            <img src="${fakemon.image}" alt="${fakemon.name}" class="h-full object-contain">
-                        </div>
-                        <span class="absolute top-2 right-2 bg-white/90 darkj:bg-gray-900/90 text-xs px-2 py-1 rounded-full">#${fakemon.id.toString().padStart(3, '0')}</span>
+                <div class="relative">
+                    <div class="bg-gray-100 darkj:bg-gray-700 flex items-center justify-center p-4">
+                        <img src="${fakemon.image}" alt="${fakemon.name}" class="h-full object-contain rounded-lg">
                     </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-lg text-gray-800 darkj:text-white mb-2">${fakemon.name}</h3>
-                        <div class="flex gap-2 mb-3">
-                            ${fakemon.types.map(type => `
-                                <span class="text-xs px-3 py-1 rounded-full ${typeColors[type]}">${type}</span>
-                            `).join('')}
-                        </div>
-                        <div class="flex justify-between text-sm text-gray-600 darkj:text-gray-300">
-                            <span>HP: ${fakemon.stats.hp}</span>
-                            <span>ATQ: ${fakemon.stats.attack}</span>
-                            <span>DEF: ${fakemon.stats.defense}</span>
-                        </div>
+                    <span class="absolute top-2 right-2 bg-white/90 darkj:bg-gray-900/90 text-xs px-2 py-1 rounded-full">#${fakemon.id.toString().padStart(3, '0')}</span>
+                </div>
+                <div class="p-4">
+                    <h3 class="font-bold text-lg text-gray-800 darkj:text-white mb-2">${fakemon.name}</h3>
+                    <div class="flex gap-2 mb-3">
+                        ${fakemon.types.map(type => `
+                            <span class="text-xs px-3 py-1 rounded-full ${typeColors[type]}">${type}</span>
+                        `).join('')}
                     </div>
-                `;
+                    <div class="flex justify-between text-sm text-gray-600 darkj:text-gray-300">
+                        <span>HP: ${fakemon.stats.hp}</span>
+                        <span>ATQ: ${fakemon.stats.attack}</span>
+                        <span>DEF: ${fakemon.stats.defense}</span>
+                    </div>
+                </div>
+            `;
                 container.appendChild(card);
             });
+        }
 
-            // Filtros de tipo
-            const typeFilters = document.getElementById('type-filters');
+        function renderPagination() {
+            const totalPages = Math.ceil(filteredFakemons.length / itemsPerPage);
+            paginationContainer.innerHTML = '';
+
+            const createBtn = (text, page, isActive = false, isDisabled = false) => {
+                const btn = document.createElement('button');
+                btn.textContent = text;
+                btn.className = `w-10 h-10 rounded-full flex items-center justify-center ${isActive ? 'bg-purple-500 text-white' : 'bg-gray-100 darkj:bg-gray-700 text-gray-700 darkj:text-gray-300 hover:bg-purple-500 hover:text-white'} transition-colors`;
+                if (isDisabled) {
+                    btn.disabled = true;
+                    btn.classList.add('opacity-50', 'cursor-not-allowed');
+                } else {
+                    btn.addEventListener('click', () => {
+                        currentPage = page;
+                        renderPage(currentPage);
+                        renderPagination();
+                    });
+                }
+                return btn;
+            };
+
+            paginationContainer.appendChild(createBtn('‹', currentPage - 1, false, currentPage === 1));
+
+            for (let i = 1; i <= totalPages; i++) {
+                paginationContainer.appendChild(createBtn(i, i, currentPage === i));
+            }
+
+            paginationContainer.appendChild(createBtn('›', currentPage + 1, false, currentPage === totalPages));
+        }
+
+        function setupTypeFilters() {
+            typeFilters.innerHTML = '';
             Object.keys(typeColors).forEach(type => {
-                const filter = document.createElement('button');
-                filter.type = 'button';
-                filter.className = `text-xs px-3 py-1 rounded-full ${typeColors[type]} opacity-70 hover:opacity-100 transition-opacity`;
-                filter.textContent = type;
-                filter.addEventListener('click', () => {
-                    filter.classList.toggle('ring-2');
-                    filter.classList.toggle('ring-purple-500');
-                    filter.classList.toggle('opacity-70');
-                    filter.classList.toggle('opacity-100');
-                    // Lógica de filtro aqui
+                const button = document.createElement('button');
+                button.type = 'button';
+                button.className = `text-xs px-3 py-1 rounded-full ${typeColors[type]} opacity-70 hover:opacity-100 transition-opacity`;
+                button.textContent = type;
+                button.addEventListener('click', () => {
+                    if (selectedTypes.has(type)) {
+                        selectedTypes.delete(type);
+                        button.classList.remove('ring-2', 'ring-purple-500');
+                        button.classList.add('opacity-70');
+                    } else {
+                        selectedTypes.add(type);
+                        button.classList.add('ring-2', 'ring-purple-500');
+                        button.classList.remove('opacity-70');
+                    }
+                    applyFilters();
                 });
-                typeFilters.appendChild(filter);
+                typeFilters.appendChild(button);
             });
+        }
+
+        function applyFilters() {
+            filteredFakemons = allFakemons.filter(fakemon => {
+                const matchesSearch = searchTerm === '' || fakemon.name.toLowerCase().includes(searchTerm);
+                const matchesType = selectedTypes.size === 0 || fakemon.types.some(t => selectedTypes.has(t));
+                return matchesSearch && matchesType;
+            });
+            currentPage = 1;
+            renderPage(currentPage);
+            renderPagination();
+        }
+
+        searchInput.addEventListener('input', e => {
+            searchTerm = e.target.value.toLowerCase();
+            applyFilters();
         });
+
+        document.addEventListener('DOMContentLoaded', fetchFakemons);
     </script>
+
+
+
 </body>
 
 </html>

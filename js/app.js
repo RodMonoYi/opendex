@@ -9,21 +9,39 @@ async function initApp() {
         renderFeaturedFakemons();
         renderRecentArtists();
         setupEventListeners();
+        console.log('Fakemons carregados com sucesso:', fakemons);
+
     } catch (error) {
         console.error('Erro ao carregar os fakemons:', error);
     }
 }
 
-console.log('Fakemons carregados com sucesso:', fakemons);
+async function initApp() {
+    try {
+        const response = await fetch('js/fakemons.json');
+        const data = await response.json();
+
+        // Carrega todos os pokémons
+        // fakemons = data;
+
+        // Carrega apenas os fakemons desejados por ID
+        const idsDesejados = [10, 23, 25, 28, 29, 30, 31, 32];
+        fakemons = data.filter(f => idsDesejados.includes(f.id));
+
+        renderFeaturedFakemons();
+        renderRecentArtists();
+        setupEventListeners();
+
+        console.log('Fakemons carregados com sucesso:', fakemons);
+    } catch (error) {
+        console.error('Erro ao carregar os fakemons:', error);
+    }
+}
+
 
 // Sample data for artists
 const artists = [
-    { name: "Rod", fakemons: 12, avatar: "https://placehold.co/100/A855F7/FFFFFF?text=ROD" },
-    { name: "MarineArt", fakemons: 8, avatar: "https://placehold.co/100/4ECDC4/FFFFFF?text=MA" },
-    { name: "GeoDesigns", fakemons: 15, avatar: "https://placehold.co/100/FFE66D/000000?text=GD" },
-    { name: "SkyIllustrator", fakemons: 6, avatar: "https://placehold.co/100/A5D8FF/000000?text=SI" },
-    { name: "PixelDrake", fakemons: 22, avatar: "https://placehold.co/100/FF9F1C/FFFFFF?text=PD" },
-    { name: "MythicInk", fakemons: 17, avatar: "https://placehold.co/100/8A2BE2/FFFFFF?text=MI" }
+    { name: "Rod", fakemons: 31, avatar: "../assets/imgs/profile-photo.png" },
 ];
 
 // Type colors
@@ -84,6 +102,7 @@ const authButton = document.getElementById('auth-button');
 // }
 
 // Render featured fakemons
+// Carrega todos os pokemons na home
 function renderFeaturedFakemons() {
     featuredFakemonsContainer.innerHTML = '';
 
@@ -93,8 +112,8 @@ function renderFeaturedFakemons() {
         fakemonCard.addEventListener('click', () => openFakemonModal(fakemon));
 
         fakemonCard.innerHTML = `
-            <div class="h-48 bg-gray-100 darkj:bg-gray-700 flex items-center justify-center p-4">
-                <img src="${fakemon.image}" alt="${fakemon.name}" class="h-full object-contain">
+            <div class="bg-gray-100 darkj:bg-gray-700 flex items-center justify-center p-4">
+                <img src="${fakemon.image}" alt="${fakemon.name}" class="h-full object-contain rounded-lg">
             </div>
             <div class="p-4">
                 <div class="flex justify-between items-start mb-2">
@@ -107,9 +126,13 @@ function renderFeaturedFakemons() {
                 </div>
                 <p class="text-sm text-gray-600 darkj:text-gray-300 line-clamp-2 mb-3">${fakemon.description}</p>
                 <div class="flex items-center">
-                    <div class="w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center text-white text-xs">
-                        ${fakemon.artist.name.charAt(0)}
-                    </div>
+                <!-- 
+                    // <div class="w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center text-white text-xs">
+                    //     ${fakemon.artist.name.charAt(0)}
+                    // </div>
+                     -->
+                    <img src="../assets/imgs/profile-photo.png" alt="${fakemon.artist.name}" class="w-6 h-6 rounded-full border-2 border-purple-500">
+               
                     <span class="ml-2 text-sm text-gray-700 darkj:text-gray-300">${fakemon.artist.name}</span>
                 </div>
             </div>
@@ -290,9 +313,9 @@ function setupEventListeners() {
     });
 
     // Add fakemon button (you would add this to your "Add Fakemon" button)
-    document.querySelector('[data-i18n="add_fakemon"]').closest('button').addEventListener('click', () => {
-        addFakemonModal.classList.remove('hidden');
-    });
+    // document.querySelector('[data-i18n="add_fakemon"]').closest('button').addEventListener('click', () => {
+    //     addFakemonModal.classList.remove('hidden');
+    // });
 }
 
 // Initialize the app when DOM is loaded
